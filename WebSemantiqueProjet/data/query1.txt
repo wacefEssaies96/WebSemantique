@@ -1,0 +1,4 @@
+SELECT ?commentaire
+WHERE {
+  ?commentaire a <http://reseau-social.com/Commentaire>.
+}

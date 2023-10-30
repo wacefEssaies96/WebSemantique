@@ -1,235 +1,149 @@
-import { Box, Button, Card, Container, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Grid, Fab, Icon, lighten, styled, useTheme, Checkbox, Hidden, IconButton, Avatar } from '@mui/material';
-import { Breadcrumb } from 'app/components';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import React, { Fragment, useEffect, useState } from 'react';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css'
-import { DateRange, StarOutline } from '@mui/icons-material';
-import { format } from 'date-fns';
-import axios from 'axios';
-import { Table } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
+import * as rdflib from 'rdflib';
 
-const PublicationUser = () => {
+const RDFData = `
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix : <http://reseau-social.com/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-    const [open, setOpen] = React.useState(false);
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
-    const [value, setValue] = useState('');
-    const [table, setTable] = useState();
-    var toolbarOptions = [
-        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-        ['blockquote', 'code-block'],
+:Membre rdf:type owl:Class;
+    rdfs:subClassOf :simpleUtilisateur.
 
-        [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-        [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
-        [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-        [{ 'direction': 'rtl' }],                         // text direction
+:Emoji rdf:type owl:Class.
 
-        [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+:simpleUtilisateur rdf:type owl:Class;
+    rdfs:subClassOf :Utilisateur.
 
-        [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-        [{ 'font': [] }],
-        [{ 'align': [] }],
-        ['link', 'image'],
+:SuperAdministrateur rdf:type owl:Class;
+    rdfs:subClassOf :Utilisateur.
 
-        ['clean']                                         // remove formatting button
-    ];
+:Commentaire rdf:type owl:Class.
 
-    function handleClickOpen() {
-        setOpen(true);
-    }
+:UtilisateurPrivilegie rdf:type owl:Class;
+    rdfs:subClassOf :Utilisateur.
 
-    function handleClose() {
-        setOpen(false);
-    }
+:Emoji rdf:type owl:Class.
 
-    const module = {
-        toolbar: toolbarOptions
-    }
+:geres rdf:type owl:ObjectProperty.
 
-    const ContentBox = styled('div')(() => ({
-        display: 'flex',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-    }));
+:est_associe_a rdf:type owl:ObjectProperty.
 
-    const FabIcon = styled(Fab)(() => ({
-        width: '44px !important',
-        height: '44px !important',
-        boxShadow: 'none !important',
-    }));
+:est_auteurDe rdf:type owl:ObjectProperty.
 
-    const H3 = styled('h3')(({ textcolor }) => ({
-        margin: 0,
-        color: textcolor,
-        fontWeight: '500',
-        marginLeft: '12px',
-    }));
+:repond_a rdf:type owl:ObjectProperty.
 
-    const H1 = styled('h1')(({ theme }) => ({
-        margin: 0,
-        flexGrow: 1,
-        color: theme.palette.text.secondary,
-    }));
+:Date_creation rdf:type owl:DatatypeProperty;
+    rdfs:domain :Commentaire.
 
-    const Span = styled('span')(({ textcolor }) => ({
-        fontSize: '13px',
-        color: textcolor,
-        marginLeft: '4px',
-    }));
+:Type_Contenu rdf:type owl:DatatypeProperty;
+    rdfs:domain :Commentaire.
 
-    const IconBox = styled('div')(() => ({
-        width: 16,
-        height: 16,
-        color: '#fff',
-        display: 'flex',
-        overflow: 'hidden',
-        borderRadius: '300px ',
-        justifyContent: 'center',
-        '& .icon': { fontSize: '14px' },
-    }));
+:contenu rdf:type owl:DatatypeProperty;
+    rdfs:domain :Commentaire.
 
-    const { palette } = useTheme();
-    const textError = palette.error.main;
-    const bgError = lighten(palette.error.main, 0.85);
+:emojis rdf:type owl:DatatypeProperty;
+    rdfs:domain :Commentaire.
 
-    const StyledAvatar = styled(Avatar)(() => ({
-        width: '32px !important',
-        height: '32px !important',
-    }));
+:id rdf:type owl:DatatypeProperty;
+    rdfs:domain :Commentaire.
 
-    const textMuted = palette.text.secondary;
+<http://reseau-social.com/emoji1> rdf:type :Emoji;
+    :est_associe_a [
+        rdf:type :Commentaire;
+        :Type_Contenu "Type de contenu 1";
+        :emojis "😊,👍,❤";
+        :id "1"^^xsd:integer;
+        :Date_creation "2023-10-25T09:00:00"^^xsd:dateTime;
+        :contenu "Contenu du commentaire 1"
+    ].
 
-    const ProjectName = styled(Span)(({ theme }) => ({
-        marginLeft: 24,
-        fontWeight: '500',
-        [theme.breakpoints.down('sm')]: { marginLeft: 4 },
-    }));
+<http://reseau-social.com/membre1> rdf:type :Membre;
+    :repond_a <http://reseau-social.com/commentaire1>;
+    :est_auteurDe <http://reseau-social.com/commentaire2>.
 
-    const getData = async () => {
-        try {
-            const response = await fetch('http://localhost:8081/publicationMS/publication');
-            if (!response.ok) {
-                setTable(response)
-                throw new Error(`HTTP error! Status: ${response.status}`);
+<http://reseau-social.com/superAdministrateur1> rdf:type :SuperAdministrateur;
+    :gere <http://reseau-social.com/commentaire1>.
 
-            }
-            const data = await response.json();
-            console.log(data);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    }
+<http://reseau-social.com/utilisateurPrivilegie1> rdf:type :UtilisateurPrivilegie;
+    :repond_a <http://reseau-social.com/commentaire2>;
+    :est_auteurDe <http://reseau-social.com/commentaire1>.
 
+`;
+
+function PublicationUser() {
+    const [data, setData] = useState([]);
+    const [commentInput, setCommentInput] = useState('');
+   
+    var store = rdflib.graph();
     useEffect(() => {
-        const fetchData = async () => {
-            await getData();
+    
+  
+      // Parse the Turtle RDF data
+      rdflib.parse(RDFData, store, 'http://reseau-social.com/', 'text/turtle');
+  
+      // Query the RDF data to retrieve specific information
+      const emojis = store.each(undefined, rdflib.namedNode('http://reseau-social.com/emojis'), undefined);
+      const commentaires = store.each(undefined, rdflib.namedNode('http://reseau-social.com/repond_a'), undefined);
+  
+      // Construct an array of data to display
+      const parsedData = commentaires.map((commentaire) => {
+        const id = commentaire.uri;
+        const emojisValue = emojis.find((emoji) => emoji.object && emoji.subject.equals(commentaire.object));
+        return {
+          id: id,
+          emojis: emojisValue ? emojisValue.object.value : 'N/A',
         };
-
-        fetchData();
+      });
+  
+      setData(parsedData);
     }, []);
-
-    return (
-        <Container>
-            <Box className="breadcrumb">
-                <Breadcrumb routeSegments={[{ name: "Material", path: "/material" }, { name: "Publication" }]} style={{ marginTop: "5%" }} />
-                <Box>
-                    <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-                        Add a new publication
-                    </Button>
-                    <table>
-                        {table && table.length > 0 && table.map((e, i) => <tr key={i}>
-                            <td>{e}</td>
-                        </tr>)}
-                    </table>
-
-                    <Dialog
-                        fullScreen={fullScreen}
-                        open={open}
-                        onClose={handleClose}
-                        aria-labelledby="responsive-dialog-title"
-                    >
-                        <DialogTitle id="responsive-dialog-title">Publication content</DialogTitle>
-
-                        <DialogContent>
-                            <DialogContentText>
-                                <ReactQuill modules={module} theme="snow" value={value} onChange={setValue} />
-                            </DialogContentText>
-                        </DialogContent>
-
-                        <DialogActions>
-                            <Button onClick={handleClose} color="primary">
-                                Cancel
-                            </Button>
-
-                            <Button onClick={handleClose} color="primary" autoFocus>
-                                Add
-                            </Button>
-                        </DialogActions>
-                    </Dialog>
-                </Box>
-            </Box>
-            <Grid item xs={12} md={6}>
-                <Card elevation={3} sx={{ p: 2 }}>
-                    <Hidden smDown>
-                        <Grid item xs={3}>
-                            <Box display="flex" position="relative" marginLeft="-0.875rem !important">
-                                <StyledAvatar src="/assets/images/face-4.jpg" />
-                            </Box>
-                        </Grid>
-                    </Hidden>
-
-                    <ContentBox>
-                        <FabIcon size="medium" sx={{ background: bgError, overflow: 'hidden' }}>
-                            <Icon sx={{ color: textError }}>favorite_border</Icon>
-                        </FabIcon>
-                    </ContentBox>
-
-                    <ContentBox sx={{ pt: 2 }}>
-                        <H1>Publication</H1>
-                        <ProjectName>Pub content</ProjectName>
-                    </ContentBox>
-                </Card>
-            </Grid>
-
-            <Fragment>
-                <Card sx={{ py: 1, px: 2 }} className="project-card">
-                    <Grid container alignItems="center">
-                        <Grid item md={5} xs={7}>
-                            <Box display="flex" alignItems="center">
-                                <Checkbox />
-                                <Hidden smDown>
-                                    <DateRange size="small">
-                                        <Icon>date_range</Icon>
-                                    </DateRange>
-                                </Hidden>
-
-                            </Box>
-                        </Grid>
-
-                        <Grid item md={3} xs={4}>
-                            <Box color={textMuted}>{format(new Date().getTime(), 'MM/dd/yyyy hh:mma')}</Box>
-                        </Grid>
-
-
-
-                        <Grid item xs={1}>
-                            <Box display="flex" justifyContent="flex-end">
-                                <IconButton>
-                                    <Icon>more_vert</Icon>
-                                </IconButton>
-                            </Box>
-                        </Grid>
-                    </Grid>
-                </Card>
-                <Box py={1} />
-            </Fragment>
-
-        </Container>
-
-    );
-};
-
-export default PublicationUser;
+  
+    const handleCommentSubmit = (e) => {
+        e.preventDefault();
+    
+        // Create a new RDF statement for the comment
+        const commentURI = 'http://reseau-social.com/new_comment'; // Generate a unique URI
+        const commentSubject = rdflib.sym(commentURI);
+        const commentPredicate = rdflib.sym('http://reseau-social.com/est_associe_a');
+        const commentObject = rdflib.literal(commentInput, 'http://www.w3.org/2001/XMLSchema#string');
+    
+        // Add the new comment to the RDF graph
+        store.add(commentSubject, commentPredicate, commentObject);
+    
+        // Update the data state with the new comment
+        const newComment = {
+          id: commentURI,
+          emojis: 'N/A', // You can set the initial value of emojis as needed
+        };
+        setData([...data, newComment]);
+    
+        // Reset the comment input field
+        setCommentInput('');
+      };
+    
+      return (
+        <div>
+          <h1>RDF Data</h1>
+          <form onSubmit={handleCommentSubmit}>
+            <input
+              type="text"
+              placeholder="Add a comment"
+              value={commentInput}
+              onChange={(e) => setCommentInput(e.target.value)}
+            />
+            <button type="submit">Submit</button>
+          </form>
+          <ul>
+            {data.map((item) => (
+              <li key={item.id}>
+                Commentaire ID: {item.id}, Emojis: {item.emojis}
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+    
+    export default PublicationUser;
