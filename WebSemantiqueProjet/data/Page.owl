@@ -1,0 +1,60 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://reseau-social.com/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://reseau-social.com/PagePriveeClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/SimpleUtilisateurClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/PagePublicClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilegieClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/AdministrateurClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/MembreClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/SuperAdministrateurClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/PageClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/Publicite"/>
+  <owl:Class rdf:about="http://reseau-social.com/UtilisateurClass"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/est_associe_a"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/est_auteurDe"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/partage"/>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionPage">
+    <rdfs:domain rdf:resource="http://reseau-social.com/PageClass"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionPublicite">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Publicite"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/idPublicite">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Publicite"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/ImagePublicite">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Publicite"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/idPage">
+    <rdfs:domain rdf:resource="http://reseau-social.com/PageClass"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/badge">
+    <rdfs:domain rdf:resource="http://reseau-social.com/PageClass"/>
+  </owl:DatatypeProperty>
+  <Publicite rdf:about="http://reseau-social.com/pub1">
+    <est_associe_a>
+      <PagePriveeClass rdf:about="http://reseau-social.com/5TWIN4">
+        <descriptionPage>5TWIN4</descriptionPage>
+        <idPage>2</idPage>
+      </PagePriveeClass>
+    </est_associe_a>
+    <descriptionPublicite>Publication Sport</descriptionPublicite>
+    <idPublicite>1</idPublicite>
+  </Publicite>
+  <AdministrateurClass rdf:about="http://reseau-social.com/admin"/>
+  <MembreClass rdf:about="http://reseau-social.com/membre1">
+    <est_auteurDe rdf:resource="http://reseau-social.com/5TWIN4"/>
+  </MembreClass>
+  <SuperAdministrateurClass rdf:about="http://reseau-social.com/superAdmin">
+    <partage>
+      <PagePublicClass rdf:about="http://reseau-social.com/Esprit">
+        <descriptionPage>Esprit</descriptionPage>
+        <idPage>1</idPage>
+      </PagePublicClass>
+    </partage>
+  </SuperAdministrateurClass>
+</rdf:RDF>
