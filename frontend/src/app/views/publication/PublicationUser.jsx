@@ -15,7 +15,6 @@ const PublicationUser = () => {
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const [value, setValue] = useState('');
-    const [table, setTable] = useState();
     var toolbarOptions = [
         ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
         ['blockquote', 'code-block'],
@@ -108,29 +107,6 @@ const PublicationUser = () => {
         [theme.breakpoints.down('sm')]: { marginLeft: 4 },
     }));
 
-    const getData = async () => {
-        try {
-            const response = await fetch('http://localhost:8081/publicationMS/publication');
-            if (!response.ok) {
-                setTable(response)
-                throw new Error(`HTTP error! Status: ${response.status}`);
-
-            }
-            const data = await response.json();
-            console.log(data);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    }
-
-    useEffect(() => {
-        const fetchData = async () => {
-            await getData();
-        };
-
-        fetchData();
-    }, []);
-
     return (
         <Container>
             <Box className="breadcrumb">
@@ -139,11 +115,6 @@ const PublicationUser = () => {
                     <Button variant="outlined" color="primary" onClick={handleClickOpen}>
                         Add a new publication
                     </Button>
-                    <table>
-                        {table && table.length > 0 && table.map((e, i) => <tr key={i}>
-                            <td>{e}</td>
-                        </tr>)}
-                    </table>
 
                     <Dialog
                         fullScreen={fullScreen}
