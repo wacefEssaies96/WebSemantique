@@ -25,12 +25,16 @@
   <owl:Class rdf:about="http://reseau-social.com/EvenementSportif">
     <rdfs:subClassOf rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/Emoji"/>
   <owl:Class rdf:about="http://reseau-social.com/SimpleUtilisateur">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://reseau-social.com/Utilisateur"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilegieClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/simpleUtilisateur">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
+  </owl:Class>
   <owl:Class rdf:about="http://reseau-social.com/SuperAdministrateur">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilege"/>
@@ -40,9 +44,17 @@
     <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
   </owl:Class>
   <owl:Class rdf:about="http://reseau-social.com/Invitation"/>
-  <owl:Class rdf:about="http://reseau-social.com/MembreClass"/>
-  <owl:Class rdf:about="http://reseau-social.com/SuperAdministrateurClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/MembreClass">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/simpleUtilisateur"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/Commentaire"/>
+  <owl:Class rdf:about="http://reseau-social.com/SuperAdministrateurClass">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
+  </owl:Class>
   <owl:Class rdf:about="http://reseau-social.com/PageClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilegie">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
+  </owl:Class>
   <owl:Class rdf:about="http://reseau-social.com/UtilisateurClass"/>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/aime">
     <rdfs:subPropertyOf>
@@ -53,12 +65,28 @@
   <owl:ObjectProperty rdf:about="http://reseau-social.com/est_associe_a"/>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/gere"/>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/est_auteurDe"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/repond_a"/>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/partage"/>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/Date_creation">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionPage">
     <rdfs:domain rdf:resource="http://reseau-social.com/PageClass"/>
   </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/Type_Contenu">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/contenu">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionPublicite">
     <rdfs:domain rdf:resource="http://reseau-social.com/Publicite"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/emojis">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/id">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/lieu">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -114,6 +142,20 @@
     </partage>
   </Membre>
   <MembreClass rdf:about="http://reseau-social.com/membre1">
+    <repond_a>
+      <Commentaire rdf:about="http://reseau-social.com/commentaire1">
+        <Type_Contenu>Type de contenu 1</Type_Contenu>
+        <emojis>😊,👍,❤</emojis>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</id>
+        <Date_creation rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+        >2023-10-25T09:00:00</Date_creation>
+        <contenu>Contenu du commentaire 1</contenu>
+      </Commentaire>
+    </repond_a>
+    <est_auteurDe>
+      <Commentaire rdf:about="http://reseau-social.com/commentaire2"/>
+    </est_auteurDe>
     <est_auteurDe>
       <PagePriveeClass rdf:about="http://reseau-social.com/5TWIN4">
         <descriptionPage>5TWIN4</descriptionPage>
@@ -121,6 +163,9 @@
       </PagePriveeClass>
     </est_auteurDe>
   </MembreClass>
+  <SuperAdministrateurClass rdf:about="http://reseau-social.com/superAdministrateur1">
+    <gere rdf:resource="http://reseau-social.com/commentaire1"/>
+  </SuperAdministrateurClass>
   <SuperAdministrateurClass rdf:about="http://reseau-social.com/superAdmin">
     <gere>
       <Invitation rdf:about="http://reseau-social.com/invitation"/>
@@ -137,6 +182,9 @@
       </PagePublicClass>
     </partage>
   </SuperAdministrateurClass>
+  <Emoji rdf:about="http://reseau-social.com/emoji1">
+    <est_associe_a rdf:resource="http://reseau-social.com/commentaire1"/>
+  </Emoji>
   <UtilisateurPrivilege rdf:about="http://reseau-social.com/privilegeUser">
     <estAuteurDe rdf:resource="http://reseau-social.com/evenement2"/>
   </UtilisateurPrivilege>
@@ -145,5 +193,9 @@
     <descriptionPublicite>Publication Sport</descriptionPublicite>
     <idPublicite>1</idPublicite>
   </Publicite>
+  <UtilisateurPrivilegie rdf:about="http://reseau-social.com/utilisateurPrivilegie1">
+    <repond_a rdf:resource="http://reseau-social.com/commentaire2"/>
+    <est_auteurDe rdf:resource="http://reseau-social.com/commentaire1"/>
+  </UtilisateurPrivilegie>
   <AdministrateurClass rdf:about="http://reseau-social.com/admin"/>
 </rdf:RDF>
