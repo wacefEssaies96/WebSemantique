@@ -1,11 +1,3 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX ns: <http://reseau-social.com/>
-
-SELECT ?page ?property ?value
-WHERE {
-  ?page rdf:type ns:PageClass .
-  ?page ?property ?value .
-}
 PREFIX ns: <http://reseau-social.com/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 SELECT ?evenement ?nomEvenement
