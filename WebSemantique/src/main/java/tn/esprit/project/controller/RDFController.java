@@ -23,5 +23,9 @@ public class RDFController {
     public String executeSparqlQuery() {
         return rdfDataService.executeSampleSparqlQuery();
     }
+    @GetMapping("/sparqlcommentaire")
+    public String executeSparqlQueryCommentaire() {
+        return rdfDataService.CommentSparqlQuery();
+    }
 }
 
