@@ -1,0 +1,105 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://reseau-social.com/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://reseau-social.com/Membre">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/SimpleUtilisateur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/EvenementSportif">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/Evenement"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/SimpleUtilisateur">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/Utilisateur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/SuperAdministrateur">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilege"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilege">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/Invitation"/>
+  <owl:Class rdf:about="http://reseau-social.com/EvenementSocial">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Evenement"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/EvenementCulturel">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Evenement"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/aime">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://reseau-social.com/reagitA"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/estAuteurDe"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/gere"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/partage"/>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/idInvitation">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationEvenement">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateModificationEvenement">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/status">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/lieu">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionEvenement">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationInvitation">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/idEvenement">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/nomEvenement">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <Membre rdf:about="http://reseau-social.com/membre">
+    <partage>
+      <EvenementSportif rdf:about="http://reseau-social.com/evenement_id_1"/>
+    </partage>
+  </Membre>
+  <UtilisateurPrivilege rdf:about="http://reseau-social.com/privilegeUser">
+    <estAuteurDe rdf:resource="http://reseau-social.com/evenement_id_1"/>
+  </UtilisateurPrivilege>
+  <EvenementCulturel rdf:about="http://reseau-social.com/evenement_id_1">
+    <descriptionEvenement>Description Evenement</descriptionEvenement>
+    <nomEvenement>Evenement 1</nomEvenement>
+    <lieu>null</lieu>
+    <idEvenement>1</idEvenement>
+  </EvenementCulturel>
+  <SuperAdministrateur rdf:about="http://reseau-social.com/superAdmin">
+    <gere>
+      <Evenement rdf:about="http://reseau-social.com/evenement_id_1">
+        <nomEvenement>Evenement 1</nomEvenement>
+      </Evenement>
+    </gere>
+    <gere>
+      <Invitation rdf:about="http://reseau-social.com/invitation"/>
+    </gere>
+  </SuperAdministrateur>
+</rdf:RDF>

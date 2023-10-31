@@ -1,11 +1,16 @@
 package tn.esprit.project.controller;
 
+import java.io.FileNotFoundException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import tn.esprit.classe.Evenement;
 import tn.esprit.service.RDFDataService;
 
 @RestController
@@ -15,13 +20,15 @@ public class RDFController {
     @Autowired
     private RDFDataService rdfDataService;
     
-    @GetMapping("/test")
-    public void test() {
-    	System.out.println("tese");
-    }
-    @GetMapping("/sparql")
+    
+    @GetMapping("/get-all-events")
     public String executeSparqlQuery() {
-        return rdfDataService.executeSampleSparqlQuery();
+        return rdfDataService.getAllEvenement();
+    }
+    
+    @PostMapping("/add-event")
+    public String addPub(@RequestBody Evenement e) throws FileNotFoundException {
+        return rdfDataService.addNewEvent(e);
     }
 }
 
