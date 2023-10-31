@@ -91,25 +91,25 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://reseau-social.com/status">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
-  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/nom">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/status">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationHash">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationPub">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
-  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/popularite">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationPub">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/idPub">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
@@ -117,21 +117,41 @@
   </owl:DatatypeProperty>
   <Hashtag rdf:about="http://reseau-social.com/hash1">
     <estAssocieA>
-      <Publication rdf:about="http://reseau-social.com/pub1">
-        <visibilite>public</visibilite>
-      </Publication>
+      <PublicationTextuelle rdf:about="http://reseau-social.com/pub_with_id_4">
+	    <idPub>4</idPub>
+	    <dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+	    >2023-10-31T10:42:29Z</dateCreationPub>
+	    <contenu>publication 4 contenu</contenu>
+	    <visibilite>public</visibilite>
+	    <status>active</status>
+	  </PublicationTextuelle>
     </estAssocieA>
   </Hashtag>
   <Membre rdf:about="http://reseau-social.com/membre">
-    <aime rdf:resource="http://reseau-social.com/pub1"/>
+    <aime rdf:resource="http://reseau-social.com/pub_with_id_3"/>
     <partage>
-      <PublicationTextuelle rdf:about="http://reseau-social.com/pub2"/>
+      <PublicationTextuelle rdf:about="http://reseau-social.com/pub_with_id_4">
+	    <idPub>4</idPub>
+	    <dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+	    >2023-10-31T10:42:29Z</dateCreationPub>
+	    <contenu>publication 4 contenu</contenu>
+	    <visibilite>public</visibilite>
+	    <status>active</status>
+	  </PublicationTextuelle>
     </partage>
   </Membre>
+  <PublicationTextuelle rdf:about="http://reseau-social.com/pub_with_id_3">
+    <status>active</status>
+    <visibilite>specific</visibilite>
+    <contenu>publication 3 contenu</contenu>
+    <dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2023-10-31T10:42:05Z</dateCreationPub>
+    <idPub>3</idPub>
+  </PublicationTextuelle>
   <UtilisateurPrivilege rdf:about="http://reseau-social.com/privilegeUser">
-    <estAuteurDe rdf:resource="http://reseau-social.com/pub2"/>
+    <estAuteurDe rdf:resource="http://reseau-social.com/pub_with_id_4"/>
   </UtilisateurPrivilege>
   <SuperAdministrateur rdf:about="http://reseau-social.com/superAdmin">
-    <gere rdf:resource="http://reseau-social.com/pub1"/>
+    <gere rdf:resource="http://reseau-social.com/pub_with_id_3"/>
   </SuperAdministrateur>
 </rdf:RDF>
