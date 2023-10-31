@@ -19,17 +19,18 @@ import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
+import tn.esprit.classe.Hashtag;
 import tn.esprit.classe.Publication;
 import tn.esprit.tools.JenaEngine;
 
 @Service
 public class PublicationService {
 
-private Model model;
+	private Model model;
     
     @PostConstruct
     public void init() {
-		model = JenaEngine.readModel("data/publication.owl");
+		model = JenaEngine.readModel("data/ReseauxSocial.owl");
     }
     
     public Model getModel() {
@@ -52,7 +53,7 @@ private Model model;
     	       // + " ns:dateModificationPub ?dateModificationPub ;"
     	        + "}";
 
-        Model model = JenaEngine.readModel("data/publication.owl");
+        Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
 
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
         ResultSet results = qe.execSelect();
@@ -81,7 +82,7 @@ private Model model;
             return "Publication object is null.";
         }
     	
-        Model modelPub = JenaEngine.readModel("data/publication.owl");
+        Model modelPub = JenaEngine.readModel("data/ReseauxSocial.owl");
     	String NS = modelPub.getNsPrefixURI("");
 
         int idPub = p.idPub;
@@ -110,7 +111,7 @@ private Model model;
         try {
             UpdateRequest updateRequest = UpdateFactory.create(sparqlInsert);
             UpdateAction.execute(updateRequest, modelPub);
-            modelPub.write(new FileOutputStream("data/Publication.owl"), "RDF/XML");
+            modelPub.write(new FileOutputStream("data/ReseauxSocial.owl"), "RDF/XML");
         } catch (Exception e) {
             e.printStackTrace();
             return "Publication could not be added.";
@@ -129,7 +130,7 @@ private Model model;
     			+ "?publication ns:idPub '"+idPub+"' ."
     			+ "}";
 
-    	Model model = JenaEngine.readModel("data/publication.owl");
+    	Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
 
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
         ResultSet results = qe.execSelect();
@@ -164,13 +165,13 @@ private Model model;
 				    + " ?pub ns:visibilite ?visibilite ."
     			    + "}";
 
-    		    Model model = JenaEngine.readModel("data/publication.owl");
+    		    Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
 
     		    UpdateRequest updateRequest = UpdateFactory.create(deleteSparql);
 
     		    try {
     		        UpdateAction.execute(updateRequest, model);
-    		        model.write(new FileOutputStream("data/Publication.owl"), "RDF/XML");
+    		        model.write(new FileOutputStream("data/ReseauxSocial.owl"), "RDF/XML");
     		        return "Publication deleted successfully!";
     		    } catch (Exception e) {
     		        e.printStackTrace();
@@ -178,5 +179,63 @@ private Model model;
     		    }
     	}
     	return "Publication not found!";
+    }
+    
+    public String updatePub(Publication p) {
+    	if(p!=null) {
+    		String deleteSparql = "PREFIX ns: <http://reseau-social.com/>" +
+    			    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+    			    "DELETE WHERE {"
+    			    + " ?pub rdf:type ns:PublicationTextuelle ."
+    			    + " ?pub ns:idPub '" + p.idPub + "' ."
+    			    + " ?pub ns:contenu ?contenu ."
+				    + " ?pub ns:dateCreationPub ?dateCreationPub ."
+				    + " ?pub ns:status ?status ."
+				    + " ?pub ns:visibilite ?visibilite ."
+    			    + "}";
+
+    		    Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
+
+    		    UpdateRequest deleteRequest = UpdateFactory.create(deleteSparql);
+    		    
+    	    	String NS = model.getNsPrefixURI("");
+
+    	        int idPub = p.idPub;
+    	        Date dateCreationPub = new Date();
+    	        String visibilite = p.visibilite;
+    	        String contenu = p.contenu;
+    	        String status = p.status;
+    	        String typeOfPub = p.typeOfPub;
+
+    	        String newPublicationURI = NS + "pub_with_id_" + idPub;
+    	        
+    	        String formattedDate = formatToISOString(dateCreationPub);
+    	        
+    	        String sparqlInsert = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+    	                "PREFIX ns: <http://reseau-social.com/>" +
+    	                "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
+    	                "INSERT DATA {" +
+    	                " <"+ newPublicationURI +"> rdf:type ns:"+typeOfPub +" ;" +
+    	                " ns:idPub '" + idPub + "' ;" +
+    	                " ns:dateCreationPub '" + formattedDate + "'^^xsd:dateTime ;" +
+    	                " ns:contenu '" + contenu + "' ;" +
+    	                " ns:visibilite '" + visibilite + "' ;" +
+    	                " ns:status '" + status + "' ." +
+    	                "}";
+
+        		UpdateRequest updateRequest = UpdateFactory.create(sparqlInsert);
+
+    		    try {
+    		        UpdateAction.execute(deleteRequest, model);
+    		        model.write(new FileOutputStream("data/ReseauxSocial.owl"), "RDF/XML");
+    		        UpdateAction.execute(updateRequest, model);
+    		        model.write(new FileOutputStream("data/ReseauxSocial.owl"), "RDF/XML");
+    		        return "Publication updated successfully !";
+    		    } catch (Exception e) {
+    		        e.printStackTrace();
+    		        return "Error updating publication !";
+    		    }
+    	}
+    	return "Publication not found !";
     }
 }

@@ -36,8 +36,8 @@
   </owl:Class>
   <owl:Class rdf:about="http://reseau-social.com/SuperUtilisateur"/>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/estAssocieA">
-    <rdfs:range rdf:resource="http://reseau-social.com/Publication"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
+    <rdfs:range rdf:resource="http://reseau-social.com/Publication"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/aime">
     <rdfs:subPropertyOf>
@@ -45,112 +45,125 @@
     </rdfs:subPropertyOf>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/reagitA">
-    <rdfs:range rdf:resource="http://reseau-social.com/Publication"/>
-    <rdfs:domain rdf:resource="http://reseau-social.com/UtilisateurPrivilege"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Membre"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/UtilisateurPrivilege"/>
+    <rdfs:range rdf:resource="http://reseau-social.com/Publication"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/estAuteurDe">
-    <rdfs:range rdf:resource="http://reseau-social.com/Publication"/>
-    <rdfs:domain rdf:resource="http://reseau-social.com/UtilisateurPrivilege"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Membre"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/UtilisateurPrivilege"/>
+    <rdfs:range rdf:resource="http://reseau-social.com/Publication"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/gere">
-    <rdfs:range rdf:resource="http://reseau-social.com/Publication"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/SuperAdministrateur"/>
+    <rdfs:range rdf:resource="http://reseau-social.com/Publication"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/partage">
-    <rdfs:range rdf:resource="http://reseau-social.com/Publication"/>
-    <rdfs:domain rdf:resource="http://reseau-social.com/UtilisateurPrivilege"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Membre"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/UtilisateurPrivilege"/>
+    <rdfs:range rdf:resource="http://reseau-social.com/Publication"/>
   </owl:ObjectProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/sujetsAssocies">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/contenu">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/description">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/idHash">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/categorie">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateModificationPub">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/visibilite">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://reseau-social.com/nom">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/status">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/nom">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationHash">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://reseau-social.com/popularite">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationPub">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/popularite">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Hashtag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/idPub">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
   </owl:DatatypeProperty>
-  <Hashtag rdf:about="http://reseau-social.com/hash1">
-    <estAssocieA>
-      <PublicationTextuelle rdf:about="http://reseau-social.com/pub_with_id_4">
-	    <idPub>4</idPub>
-	    <dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-	    >2023-10-31T10:42:29Z</dateCreationPub>
-	    <contenu>publication 4 contenu</contenu>
-	    <visibilite>public</visibilite>
-	    <status>active</status>
-	  </PublicationTextuelle>
-    </estAssocieA>
+  <Hashtag rdf:about="http://reseau-social.com/hash_with_id_2">
+    <description>This hashtag is created for palestine freedom and safety</description>
+    <idHash>2</idHash>
+    <description>This hashtag is created for palestine freedom</description>
+    <categorie>Social</categorie>
+    <nom>#SavePalestine</nom>
+    <popularite>50000</popularite>
   </Hashtag>
   <Membre rdf:about="http://reseau-social.com/membre">
-    <aime rdf:resource="http://reseau-social.com/pub_with_id_3"/>
     <partage>
       <PublicationTextuelle rdf:about="http://reseau-social.com/pub_with_id_4">
-	    <idPub>4</idPub>
-	    <dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-	    >2023-10-31T10:42:29Z</dateCreationPub>
-	    <contenu>publication 4 contenu</contenu>
-	    <visibilite>public</visibilite>
-	    <status>active</status>
-	  </PublicationTextuelle>
+        <idPub>4</idPub>
+        <dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+        >2023-10-31T20:53:47Z</dateCreationPub>
+        <contenu>publication 4 contenu updated</contenu>
+        <visibilite>public</visibilite>
+        <status>active</status>
+      </PublicationTextuelle>
     </partage>
+    <aime>
+      <PublicationTextuelle rdf:about="http://reseau-social.com/pub_with_id_3">
+        <idPub>3</idPub>
+        <dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+        >2023-10-31T10:42:05Z</dateCreationPub>
+        <contenu>publication 3 contenu</contenu>
+        <visibilite>specific</visibilite>
+        <status>active</status>
+      </PublicationTextuelle>
+    </aime>
   </Membre>
-  <PublicationTextuelle rdf:about="http://reseau-social.com/pub_with_id_3">
+  <PublicationImage rdf:about="http://reseau-social.com/pub_with_id_5">
     <status>active</status>
-    <visibilite>specific</visibilite>
-    <contenu>publication 3 contenu</contenu>
+    <visibilite>public</visibilite>
+    <contenu>publication 5 contenu</contenu>
     <dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-    >2023-10-31T10:42:05Z</dateCreationPub>
-    <idPub>3</idPub>
-  </PublicationTextuelle>
+    >2023-10-31T21:34:28Z</dateCreationPub>
+    <idPub>5</idPub>
+  </PublicationImage>
   <UtilisateurPrivilege rdf:about="http://reseau-social.com/privilegeUser">
     <estAuteurDe rdf:resource="http://reseau-social.com/pub_with_id_4"/>
   </UtilisateurPrivilege>
+  <Hashtag rdf:about="http://reseau-social.com/hash_with_id_1">
+    <estAssocieA rdf:resource="http://reseau-social.com/pub_with_id_4"/>
+    <popularite>10000</popularite>
+    <nom>FreePalestine</nom>
+    <categorie>Social</categorie>
+    <description>for palestine freedom</description>
+    <idHash>1</idHash>
+  </Hashtag>
   <SuperAdministrateur rdf:about="http://reseau-social.com/superAdmin">
     <gere rdf:resource="http://reseau-social.com/pub_with_id_3"/>
   </SuperAdministrateur>
