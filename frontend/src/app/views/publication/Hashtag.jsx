@@ -5,13 +5,13 @@ import React, { useEffect, useState } from 'react';
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css'
 import { Small } from 'app/components/Typography';
-// import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
+import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import { Formik } from 'formik';
 import { LoadingButton } from '@mui/lab';
 
-const PublicationUser = () => {
+const Hashtag = () => {
 
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const [pubContent, setPubContent] = useState('');
@@ -23,7 +23,6 @@ const PublicationUser = () => {
         status: "",
         typeOfPub: ""
     })
-    const [openEdit, setOpenEdit] = useState(false)
 
     const getPubs = async () => {
         const res = await fetch("http://localhost:8082/websemantique/publications/getAllPub")
@@ -36,6 +35,12 @@ const PublicationUser = () => {
 
         d()
     }, [])
+
+    useEffect(() => {
+        let d = async () => await getPubs()
+
+        d()
+    }, [open])
 
     var toolbarOptions = [
         ['bold', 'italic', 'underline'],        // toggled buttons
@@ -60,17 +65,8 @@ const PublicationUser = () => {
         setOpen(true);
     }
 
-    function handleClickOpenEdit(pub) {
-        setPub(pub);
-        setOpenEdit(true);
-    }
-
     function handleClose() {
         setOpen(false);
-    }
-
-    function handleCloseEdit() {
-        setOpenEdit(false);
     }
 
     const module = {
@@ -118,7 +114,7 @@ const PublicationUser = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(pub);
+
         fetch('http://localhost:8082/websemantique/publications/addPub', {
             method: 'POST',
             headers: {
@@ -127,64 +123,17 @@ const PublicationUser = () => {
             body: JSON.stringify(pub),
         })
             .then((response) => response.json())
-            .then(async (data) => {
+            .then((data) => {
                 console.log('Response from server:', data);
-                const res = await fetch("http://localhost:8082/websemantique/publications/getAllPub")
-                const pubs = await res.json()
-                setPubList(pubs);
+                setOpen(false);
             })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
+        //   .catch((error) => {
+        //     console.error('Error:', error);
+        //   });
     }
 
-    function deleteItem(id) {
-        const shouldDelete = window.confirm("Are you sure you want to delete this Publication ?");
-        if (shouldDelete) {
-            fetch(`http://localhost:8082/websemantique/publications/deletePub/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            })
-                .then(async (response) => {
-                    if (response.ok) {
-                        console.log('Publication deleted successfully');
-                        const res = await fetch("http://localhost:8082/websemantique/publications/getAllPub")
-                        const data = await res.json()
-                        setPubList(data);
-                    } else {
-                        console.error('Failed to delete Publication');
-                    }
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                });
-        } else {
-            console.log("Deletion canceled");
-        }
-    }
+    const handleDelete = () => {
 
-    const handleSubmitEdit = (e) => {
-        e.preventDefault();
-        console.log(pub);
-        fetch('http://localhost:8082/websemantique/publications/editPub', {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(pub),
-        })
-            .then((response) => response.json())
-            .then(async (data) => {
-                console.log('Response from server:', data);
-                const res = await fetch("http://localhost:8082/websemantique/publications/getAllPub")
-                const pubs = await res.json()
-                setPubList(pubs);
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-            });
     }
 
     return (
@@ -315,140 +264,28 @@ const PublicationUser = () => {
                 {pubList.length > 0 && pubList.map((p, index) => (
                     <Grid xs={12} md={10} key={index} style={{ marginTop: "2%" }}>
                         <StyledCard elevation={6}>
+                            <Tooltip title="Edit Publication">
+                                <Button onClick={handleClickOpen} color="primary">
+                                    Edit
+                                </Button>
+                                
+                            </Tooltip>
+                            <Tooltip title="Delete Publication">
+                                <Button onClick={handleDelete} color="danger">
+                                    Delete
+                                </Button>
+                            </Tooltip>
                             <ContentBox>
                                 <div className="d-flex flex-row">
-                                    {/* <Icon className="icon" style={{ marginTop: "-1%" }}><AccountCircleTwoToneIcon></AccountCircleTwoToneIcon></Icon> */}
+                                    <Icon className="icon" style={{ marginTop: "-1%" }}><AccountCircleTwoToneIcon></AccountCircleTwoToneIcon></Icon> User Name
                                     <p>Created at {new Date(p.dateCreationPub.value).toLocaleDateString("en-US", options)}</p>
                                     <Box ml="12px">
-                                        <Small>Publication with a {p.visibilite.value} visibility</Small><br />
-                                        <Small>Publication with ID {p.idPub.value}</Small>
+                                        <Small>Publication with a {p.visibilite.value} visibility</Small>
                                         <Heading>Content <br /></Heading>
                                         <div dangerouslySetInnerHTML={{ __html: p.contenu.value }}></div>
                                     </Box>
                                 </div>
                             </ContentBox>
-                            <div className='d-flex justify-content-center'>
-                                <Button onClick={() => handleClickOpenEdit(p)} color="primary">
-                                    Edit
-                                </Button>
-                                <Button
-                                    onClick={() => deleteItem(p.idPub.value)}
-                                >
-                                    Delete
-                                </Button>
-                            </div>
-
-                            <Dialog
-                                fullScreen={fullScreen}
-                                open={openEdit}
-                                onClose={handleCloseEdit}
-                                aria-labelledby="responsive-dialog-title"
-                            >
-                                <DialogTitle id="responsive-dialog-title">Edit Publication</DialogTitle>
-                                <DialogContent>
-                                    <DialogContentText>
-                                        <Card className="card">
-                                            <Grid container>
-                                                <Grid item sm={12} xs={12}>
-                                                    <Box p={4} height="100%">
-                                                        <label style={{ color: "#004aad" }}>Publication content with text editor</label>
-                                                        <ReactQuill modules={module} theme="snow" value={pubContent} onChange={setPubContent} />
-                                                        <Formik>
-                                                            <form onSubmit={handleSubmitEdit}>
-                                                                <label style={{ color: "#004aad" }}>Publication ID</label>
-                                                                <TextField
-                                                                    fullWidth
-                                                                    size="small"
-                                                                    name="idPub"
-                                                                    type="number"
-                                                                    label="ID Publication"
-                                                                    variant="outlined"
-                                                                    value={pub.idPub}
-                                                                    onChange={handleChange}
-                                                                    sx={{ mb: 2 }}
-                                                                />
-                                                                <label style={{ color: "#004aad" }}>Publication Type</label>
-                                                                <select
-                                                                    style={{ width: "473px", height: "40px", marginBottom: "4%" }}
-                                                                    fullWidth
-                                                                    size="small"
-                                                                    name="typeOfPub"
-                                                                    label="Type Publication"
-                                                                    variant="outlined"
-                                                                    value={pub.typeOfPub}
-                                                                    onChange={handleChange}
-                                                                    sx={{ mb: 2 }}
-                                                                >
-                                                                    <option value="PublicationTextuelle">Publication Text</option>
-                                                                    <option value="PublicationImage">Publication Image</option>
-                                                                    <option value="PublicationVideo">Publication Video</option>
-                                                                </select>
-                                                                <label style={{ color: "#004aad" }}>Click on this input to get content</label>
-                                                                <TextField
-                                                                    fullWidth
-                                                                    size="small"
-                                                                    type="text"
-                                                                    name="contenu"
-                                                                    label="Content"
-                                                                    variant="outlined"
-                                                                    value={pub.contenu}
-                                                                    onChange={handleChange}
-                                                                    sx={{ mb: 3 }}
-                                                                />
-                                                                <label style={{ color: "#004aad" }}>Publication visibility</label>
-                                                                <select
-                                                                    style={{ width: "473px", height: "40px", marginBottom: "4%" }}
-                                                                    fullWidth
-                                                                    size="small"
-                                                                    name="visibilite"
-                                                                    label="Visibility"
-                                                                    variant="outlined"
-                                                                    value={pub.visibilite}
-                                                                    onChange={handleChange}
-                                                                    sx={{ mb: 3 }}
-                                                                >
-                                                                    <option value="Public">Public</option>
-                                                                    <option value="Private">Private</option>
-                                                                    <option value="Specific">Specific</option>
-                                                                </select>
-                                                                <label style={{ color: "#004aad" }}>Publication status</label>
-                                                                <select
-                                                                    style={{ width: "473px", height: "40px", marginBottom: "4%" }}
-                                                                    fullWidth
-                                                                    size="small"
-                                                                    name="status"
-                                                                    label="Satuts"
-                                                                    variant="outlined"
-                                                                    value={pub.status}
-                                                                    onChange={handleChange}
-                                                                    sx={{ mb: 2 }}
-                                                                >
-                                                                    <option value="Active">Active</option>
-                                                                    <option value="Archive">Archive</option>
-                                                                </select>
-                                                                <LoadingButton
-                                                                    type="submit"
-                                                                    color="primary"
-                                                                    variant="contained"
-                                                                    sx={{ mb: 2, mt: 3 }}
-                                                                >
-                                                                    Create Publication
-                                                                </LoadingButton>
-                                                            </form>
-                                                        </Formik>
-                                                    </Box>
-                                                </Grid>
-                                            </Grid>
-                                        </Card>
-                                    </DialogContentText>
-                                </DialogContent>
-
-                                <DialogActions>
-                                    <Button onClick={handleCloseEdit} color="primary">
-                                        Cancel
-                                    </Button>
-                                </DialogActions>
-                            </Dialog>
                         </StyledCard>
                     </Grid>
                 ))}
@@ -458,4 +295,4 @@ const PublicationUser = () => {
     );
 };
 
-export default PublicationUser;
+export default Hashtag;

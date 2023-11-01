@@ -42,7 +42,6 @@ public class PublicationService {
     	String qexec = "PREFIX ns: <http://reseau-social.com/>"
     	        + "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
     	        + "SELECT ?idPub ?contenu ?dateCreationPub ?status "
-    	        //+ "?dateModificationPub  "
     	        + "?visibilite "
     	        + " WHERE {"
     	        + "?Publication ns:idPub ?idPub ;"
@@ -50,7 +49,6 @@ public class PublicationService {
     	        + " ns:dateCreationPub ?dateCreationPub ;"
     	        + " ns:status ?status ;"
     	        + " ns:visibilite ?visibilite ;"
-    	       // + " ns:dateModificationPub ?dateModificationPub ;"
     	        + "}";
 
         Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
@@ -123,12 +121,16 @@ public class PublicationService {
     }
     
     public String getPubById(int idPub) {
-    	String qexec = "PREFIX ns: <http://reseau-social.com/>"+
-    			"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" 
-    			+ "SELECT ?publication "
-    			+ "WHERE {"
-    			+ "?publication ns:idPub '"+idPub+"' ."
-    			+ "}";
+    	String qexec = "PREFIX ns: <http://reseau-social.com/>"
+    	        + "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
+    	        + "SELECT ?publication ?contenu ?dateCreationPub ?status ?visibilite "
+    	        + " WHERE {"
+    	        + "?Publication ns:idPub '"+idPub+"' ;"
+    	        + " ns:contenu ?contenu ;"
+    	        + " ns:dateCreationPub ?dateCreationPub ;"
+    	        + " ns:status ?status ;"
+    	        + " ns:visibilite ?visibilite ;"
+    	        + "}";
 
     	Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
 
@@ -157,7 +159,6 @@ public class PublicationService {
     		String deleteSparql = "PREFIX ns: <http://reseau-social.com/>" +
     			    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
     			    "DELETE WHERE {"
-    			    + " ?pub rdf:type ns:PublicationTextuelle ."
     			    + " ?pub ns:idPub '" + idPub + "' ."
     			    + " ?pub ns:contenu ?contenu ."
 				    + " ?pub ns:dateCreationPub ?dateCreationPub ."
@@ -186,7 +187,7 @@ public class PublicationService {
     		String deleteSparql = "PREFIX ns: <http://reseau-social.com/>" +
     			    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
     			    "DELETE WHERE {"
-    			    + " ?pub rdf:type ns:PublicationTextuelle ."
+    			    + " ?pub rdf:type ns:"+p.typeOfPub +" ."
     			    + " ?pub ns:idPub '" + p.idPub + "' ."
     			    + " ?pub ns:contenu ?contenu ."
 				    + " ?pub ns:dateCreationPub ?dateCreationPub ."

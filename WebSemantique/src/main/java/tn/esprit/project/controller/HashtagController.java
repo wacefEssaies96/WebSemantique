@@ -48,4 +48,9 @@ public class HashtagController {
     public String editHash(@RequestBody Hashtag h) throws FileNotFoundException {
         return hashSer.updateHash(h);
     }
+    
+    @GetMapping("/getAllHashsPub")
+    public String getAllHashsPub() {
+        return hashSer.getAllHashsPub();
+    }
 }

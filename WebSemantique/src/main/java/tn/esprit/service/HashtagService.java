@@ -27,7 +27,7 @@ public class HashtagService {
 	
 	@PostConstruct
     public void init() {
-		model = JenaEngine.readModel("data/publication.owl");
+		model = JenaEngine.readModel("data/ReseauxSocial.owl");
     }
     
     public Model getModel() {
@@ -47,7 +47,7 @@ public class HashtagService {
     	        + " ns:popularite ?popularite ;"
     	        + "}";
 
-        Model model = JenaEngine.readModel("data/publication.owl");
+        Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
 
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
         ResultSet results = qe.execSelect();
@@ -71,7 +71,7 @@ public class HashtagService {
             return "Hashtag object is null.";
         }
     	
-        Model modelPub = JenaEngine.readModel("data/publication.owl");
+        Model modelPub = JenaEngine.readModel("data/ReseauxSocial.owl");
     	String NS = modelPub.getNsPrefixURI("");
 
     	int idHash = h.idHash;
@@ -97,7 +97,7 @@ public class HashtagService {
         try {
             UpdateRequest updateRequest = UpdateFactory.create(sparqlInsert);
             UpdateAction.execute(updateRequest, modelPub);
-            modelPub.write(new FileOutputStream("data/Publication.owl"), "RDF/XML");
+            modelPub.write(new FileOutputStream("data/ReseauxSocial.owl"), "RDF/XML");
         } catch (Exception e) {
             e.printStackTrace();
             return "Hahstag could not be added.";
@@ -116,7 +116,7 @@ public class HashtagService {
     			+ "?hash ns:nom '"+nom+"' ."
     			+ "}";
 
-    	Model model = JenaEngine.readModel("data/publication.owl");
+    	Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
 
         QueryExecution qe = QueryExecutionFactory.create(qexec, model);
         ResultSet results = qe.execSelect();
@@ -151,13 +151,13 @@ public class HashtagService {
 				    + " ?h ns:popularite ?popularite ."
     			    + "}";
 
-    		    Model model = JenaEngine.readModel("data/publication.owl");
+    		    Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
 
     		    UpdateRequest updateRequest = UpdateFactory.create(deleteSparql);
 
     		    try {
     		        UpdateAction.execute(updateRequest, model);
-    		        model.write(new FileOutputStream("data/Publication.owl"), "RDF/XML");
+    		        model.write(new FileOutputStream("data/ReseauxSocial.owl"), "RDF/XML");
     		        return "Hashtag deleted successfully!";
     		    } catch (Exception e) {
     		        e.printStackTrace();
@@ -180,7 +180,7 @@ public class HashtagService {
 				    + " ?h ns:popularite ?popularite ."
     			    + "}";
 
-    		    Model model = JenaEngine.readModel("data/publication.owl");
+    		    Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
 
     		    UpdateRequest deleteRequest = UpdateFactory.create(deleteSparqlById);
     		    
@@ -210,9 +210,9 @@ public class HashtagService {
 
     		    try {
     		        UpdateAction.execute(deleteRequest, model);
-    		        model.write(new FileOutputStream("data/Publication.owl"), "RDF/XML");
+    		        model.write(new FileOutputStream("data/ReseauxSocial.owl"), "RDF/XML");
     		        UpdateAction.execute(updateRequest, model);
-    		        model.write(new FileOutputStream("data/Publication.owl"), "RDF/XML");
+    		        model.write(new FileOutputStream("data/ReseauxSocial.owl"), "RDF/XML");
     		        return "Hashtag updated successfully !";
     		    } catch (Exception e) {
     		        e.printStackTrace();
@@ -220,5 +220,37 @@ public class HashtagService {
     		    }
     	}
     	return "Hashtag not found !";
+    }
+    
+    public String getAllHashsPub() {
+    	
+    	String qexec = "PREFIX ns: <http://reseau-social.com/>"
+    	        + "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
+    	        + "SELECT ?idHash ?description ?categorie ?nom ?popularite ?pub "
+    	        + " WHERE {"
+    	        + "?Hashtag ns:idHash ?idHash ;"
+    	        + " ns:description ?description ;"
+    	        + " ns:categorie ?categorie ;"
+    	        + " ns:nom ?nom ;"
+    	        + " ns:popularite ?popularite ;"
+    	        + " ns:est_associe_a ?pub ;" 
+    	        + "}";
+
+        Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
+
+        QueryExecution qe = QueryExecutionFactory.create(qexec, model);
+        ResultSet results = qe.execSelect();
+
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+        ResultSetFormatter.outputAsJSON(outputStream, results);
+
+        String json = new String(outputStream.toByteArray());
+
+        JSONObject j = new JSONObject(json);
+        
+        System.out.println(j.getJSONObject("results").getJSONArray("bindings"));
+
+        return j.getJSONObject("results").getJSONArray("bindings").toString();
     }
 }
