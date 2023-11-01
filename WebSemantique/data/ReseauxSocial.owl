@@ -1,5 +1,1132 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:j.0="http://reseau-social.com/">
+  <owl:Ontology rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12"/>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CommentaireTextuel">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PublicationVideo">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementSocial">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CommentaireVideo">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementSportif">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupePublic">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SimpleUtilisateur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CommentaireImage">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PagePrivee">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Visiteur">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SimpleUtilisateur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PagePublique">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SimpleUtilisateur">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupeEducation">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PublicationImage">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SuperAdministrateur">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
+        </owl:onProperty>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PublicationTextuelle">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupePrive">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementCulturel">
+    <rdfs:subClassOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe">
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    </rdfs:range>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    </rdfs:range>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre"/>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    </rdfs:range>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre"/>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    </rdfs:range>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#reagit_a"/>
+    </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage">
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    </rdfs:range>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre"/>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    </rdfs:range>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage_membre">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    </rdfs:domain>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    </rdfs:range>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    </rdfs:domain>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    </rdfs:domain>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    </rdfs:range>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    </rdfs:domain>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    </rdfs:range>
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:range>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#repond_a">
+    <rdfs:range>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    </rdfs:range>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#reagit_a"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nomGroupe">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Type_Contenu">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Contenu">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationEvenement">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#repond_a"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Categorie">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nomEvenement">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#badge">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#lieu">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idEvenement">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idInvitation">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_ModificationPub">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#numero">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#long"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SujetAssocie">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idEmoji">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_Creation">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idCommentaire">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descriptionEvenement">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#DescriptionHashtag">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nomHashtag">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idPage">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idPublicite">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idUtilisateur">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Popularite">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descripitionPublicite">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idPublication">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idDiscussion">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Regles">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#email">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Visibilite">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:subPropertyOf>
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
+        <owl:onClass>
+          <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+        </owl:onClass>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationInvitation">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_CreationHashtag">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_MpdifionEvenement">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nom">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#titreDiscussion">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CategorieHashtag">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descriptionPage">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#contenuDiscussion">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idHashtag">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#List_Emoji">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    <rdfs:domain>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </rdfs:domain>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <idPublication rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</idPublication>
+    <ContenuPub rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >Publication 1</ContenuPub>
+    <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#status">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationGroupe">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_CreationPub">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#prenom">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#ImagePublicite">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Symbole">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descriptionGroupe">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationDiscussion">
+    <rdfs:domain>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    </rdfs:domain>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    </rdfs:subPropertyOf>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Status">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idGroupe">
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#ContenuPub">
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere">
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SuperAdministrateur"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
+  </owl:FunctionalProperty>
+  <j.0:PublicationTextuelle rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#pub_with_id_9">
+    <j.0:idPub>9</j.0:idPub>
+    <j.0:dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2023-11-01T12:33:27Z</j.0:dateCreationPub>
+    <j.0:contenu>&lt;h2&gt;&lt;u class="ql-font-serif" style="color: rgb(102, 163, 224);"&gt;Hello my network&lt;/u&gt;&lt;/h2&gt;&lt;p&gt;&lt;span style="background-color: rgb(204, 224, 245);"&gt;This is my new pub&lt;/span&gt;&lt;/p&gt;</j.0:contenu>
+    <j.0:visibilite>Private</j.0:visibilite>
+    <j.0:status>Active</j.0:status>
+  </j.0:PublicationTextuelle>
+  <j.0:null rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#pub_with_id_8"/>
+  <j.0:PublicationImage rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#pub_with_id_10"/>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#smile">
+    <idEmoji rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</idEmoji>
+    <Symbole>smile</Symbole>
+    <est_associe_a>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#commentaire_1">
+        <idCommentaire rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</idCommentaire>
+        <Contenu>commentaire 1</Contenu>
+        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+      </owl:NamedIndividual>
+    </est_associe_a>
+    <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
+  </owl:NamedIndividual>
+  <j.0:Hashtag rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#hash_with_id_2">
+    <est_associe_a>
+      <j.0:PublicationImage rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#pub_with_id_5">
+        <j.0:idPub>5</j.0:idPub>
+        <j.0:dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+        >2023-11-01T09:52:30Z</j.0:dateCreationPub>
+        <j.0:contenu>publication 5 contenu</j.0:contenu>
+        <j.0:visibilite>public</j.0:visibilite>
+        <j.0:status>active</j.0:status>
+      </j.0:PublicationImage>
+    </est_associe_a>
+    <j.0:idHash>2</j.0:idHash>
+    <j.0:description>for palestine freedom</j.0:description>
+    <j.0:categorie>Social</j.0:categorie>
+    <j.0:nom>SavePalestine</j.0:nom>
+    <j.0:popularite>10000</j.0:popularite>
+  </j.0:Hashtag>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SuperAdminstrateur">
+    <idUtilisateur rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >4</idUtilisateur>
+    <nom>SuperAdministrateur</nom>
+    <partage>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#5TWIN4">
+        <idPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >2</idPage>
+        <descriptionPage>5 TWIN 4</descriptionPage>
+        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PagePrivee"/>
+      </owl:NamedIndividual>
+    </partage>
+    <gere rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SuperAdministrateur"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#user1">
+    <idUtilisateur rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</idUtilisateur>
+    <nom>user1</nom>
+    <est_auteurDe rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#5TWIN4"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation_1">
+    <idInvitation rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</idInvitation>
+    <status>en cours</status>
+    <est_associe_a>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#event_1">
+        <idEvenement rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</idEvenement>
+        <nomEvenement>Sport</nomEvenement>
+        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementSportif"/>
+      </owl:NamedIndividual>
+    </est_associe_a>
+    <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
+  </owl:NamedIndividual>
+  <j.0:null rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#pub_with_id_7"/>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#publicite">
+    <idPublicite rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</idPublicite>
+    <descripitionPublicite>Sport</descripitionPublicite>
+    <est_associe_a>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Esprit">
+        <idPage rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</idPage>
+        <descriptionPage>Esprit</descriptionPage>
+        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PagePublique"/>
+      </owl:NamedIndividual>
+    </est_associe_a>
+    <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+  </owl:NamedIndividual>
+  <j.0:null rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#pub_with_id_6">
+    <j.0:status>Active</j.0:status>
+    <j.0:visibilite>Private</j.0:visibilite>
+    <j.0:contenu>&lt;h1 class="ql-align-center"&gt;&lt;span style="color: rgb(0, 102, 204);"&gt;Publication with an Image&lt;/span&gt;&lt;/h1&gt;&lt;p class="ql-align-center"&gt;&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAH0CAYAAADL1t+KAAAACXBIWXMAABJ0AAASdAHeZh94AADcaklEQVR4Xux9B2Ac13Xtm7a9oTeSYO8UmyrVuyxZsuTe4prYjp34uyROs9NjJ3Fsx457i5ssyU2S1btEihQpUeydIEGA6HV7m/bPHewwEE2KAAiQAHlHXgNczM68OW92zrvtXCF4YwQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQYAUaAEWAEGAFGgBFgBBgBRoARYAQY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CEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABCAAAQhAAAIQgAAEIAABCEAAAhCAAAQgAAEIQAACEIAABLZ6Av8POp7tUsoJOCoAAAAASUVORK5CYII="&gt;&lt;/p&gt;</j.0:contenu>
+    <j.0:dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2023-11-01T11:38:17Z</j.0:dateCreationPub>
+    <j.0:idPub>6</j.0:idPub>
+  </j.0:null>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag_Palestine">
+    <idHashtag rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</idHashtag>
+    <nomHashtag>Palestine</nomHashtag>
+    <est_associe_a rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#pub_with_id_5"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#discussion1">
+    <idDiscussion rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</idDiscussion>
+    <contenuDiscussion>discussion 1</contenuDiscussion>
+    <est_associe_a>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe_1">
+        <idGroupe rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</idGroupe>
+        <nomGroupe rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >group1 publique</nomGroupe>
+        <partage_membre>
+          <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe_2">
+            <idGroupe rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >2</idGroupe>
+            <idGroupe>groupe 2</idGroupe>
+            <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+          </owl:NamedIndividual>
+        </partage_membre>
+        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupePublic"/>
+      </owl:NamedIndividual>
+    </est_associe_a>
+    <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#visiteur1">
+    <idUtilisateur rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2</idUtilisateur>
+    <nom>visiteur</nom>
+    <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Visiteur"/>
+  </owl:NamedIndividual>
+  <Administrateur rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Administrateur">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
+    <repond_a rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#commentaire_1"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <idUtilisateur rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</idUtilisateur>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe"/>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+        >0</owl:minQualifiedCardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+    <nom>admin</nom>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <aime rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
+  </Administrateur>
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns="http://reseau-social.com/"
