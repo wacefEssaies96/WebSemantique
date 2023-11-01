@@ -1,1428 +1,270 @@
-<?xml version="1.0"?>
-
-
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
-<rdf:RDF xmlns="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#"
-     xml:base="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#reagit_a"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SuperAdministrateur"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage_membre -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage_membre">
-        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#reagit_a -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#reagit_a"/>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#repond_a -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#repond_a">
-        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#reagit_a"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Categorie -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Categorie">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CategorieHashtag -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CategorieHashtag">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Contenu -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Contenu">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#ContenuPub -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#ContenuPub">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_Creation -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_Creation">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_CreationHashtag -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_CreationHashtag">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_CreationPub -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_CreationPub">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_ModificationPub -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Date_ModificationPub">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#DescriptionHashtag -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#DescriptionHashtag">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#ImagePublicite -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#ImagePublicite">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#List_Emoji -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#List_Emoji">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&owl;topObjectProperty"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:domain>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Popularite -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Popularite">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Regles -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Regles">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Status -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Status">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SujetAssocie -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SujetAssocie">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Symbole -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Symbole">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Type_Contenu -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Type_Contenu">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Visibilite -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Visibilite">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#badge -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#badge">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:range rdf:resource="&xsd;boolean"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#contenuDiscussion -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#contenuDiscussion">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationDiscussion -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationDiscussion">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationEvenement -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationEvenement">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationGroupe -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationGroupe">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationInvitation -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_CreationInvitation">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_MpdifionEvenement -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#date_MpdifionEvenement">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:range rdf:resource="&xsd;dateTime"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descripitionPublicite -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descripitionPublicite">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descriptionEvenement -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descriptionEvenement">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descriptionGroupe -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descriptionGroupe">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descriptionPage -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#descriptionPage">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#email -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#email">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idCommentaire -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idCommentaire">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idDiscussion -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idDiscussion">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idEmoji -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idEmoji">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idEvenement -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idEvenement">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idGroupe -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idGroupe">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idHashtag -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idHashtag">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idInvitation -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idInvitation">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idPage -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idPage">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idPublication -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idPublication">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idPublicite -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idPublicite">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idUtilisateur -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#idUtilisateur">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-        <rdfs:range rdf:resource="&xsd;int"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#lieu -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#lieu">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nom -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nom">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nomEvenement -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nomEvenement">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nomGroupe -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nomGroupe">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nomHashtag -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#nomHashtag">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#numero -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#numero">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-        <rdfs:range rdf:resource="&xsd;long"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#prenom -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#prenom">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#status -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#status">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#titreDiscussion -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#titreDiscussion">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <rdfs:range rdf:resource="&xsd;string"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Administrateur -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Administrateur">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_auteurDe"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#repond_a"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CommentaireImage -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CommentaireImage">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CommentaireTextuel -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CommentaireTextuel">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CommentaireVideo -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#CommentaireVideo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementCulturel -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementCulturel">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementSocial -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementSocial">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementSportif -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementSportif">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupeEducation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupeEducation">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupePrive -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupePrive">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupePublic -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupePublic">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#partage"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SimpleUtilisateur"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PagePrivee -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PagePrivee">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PagePublique -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PagePublique">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PublicationImage -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PublicationImage">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PublicationTextuelle -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PublicationTextuelle">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PublicationVideo -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PublicationVideo">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#est_associe_a"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SimpleUtilisateur -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SimpleUtilisateur">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SuperAdministrateur -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SuperAdministrateur">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Evenement"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#aime"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Page"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#gere"/>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#UtilisateurPrivilege">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Utilisateur"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Visiteur -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Visiteur">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SimpleUtilisateur"/>
-    </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#5TWIN4 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#5TWIN4">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PagePrivee"/>
-        <idPage rdf:datatype="&xsd;int">2</idPage>
-        <descriptionPage rdf:datatype="&xsd;string">5 TWIN 4</descriptionPage>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Administrateur -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Administrateur">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Administrateur"/>
-        <idUtilisateur rdf:datatype="&xsd;int">3</idUtilisateur>
-        <nom rdf:datatype="&xsd;string">admin</nom>
-        <aime rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <repond_a rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#commentaire_1"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Esprit -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Esprit">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#PagePublique"/>
-        <idPage rdf:datatype="&xsd;int">1</idPage>
-        <descriptionPage rdf:datatype="&xsd;string">Esprit</descriptionPage>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe_1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe_1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#GroupePublic"/>
-        <idGroupe rdf:datatype="&xsd;int">1</idGroupe>
-        <nomGroupe rdf:datatype="&xsd;int">group1 publique</nomGroupe>
-        <partage_membre rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe_2"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe_2 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe_2">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe"/>
-        <idGroupe rdf:datatype="&xsd;int">2</idGroupe>
-        <idGroupe rdf:datatype="&xsd;string">groupe 2</idGroupe>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag_Palestine -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag_Palestine">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Hashtag"/>
-        <idHashtag rdf:datatype="&xsd;int">1</idHashtag>
-        <nomHashtag rdf:datatype="&xsd;string">Palestine</nomHashtag>
-        <est_associe_a rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation_1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation_1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Invitation"/>
-        <idInvitation rdf:datatype="&xsd;int">1</idInvitation>
-        <status rdf:datatype="&xsd;string">en cours</status>
-        <est_associe_a rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#event_1"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-        <idPublication rdf:datatype="&xsd;int">1</idPublication>
-        <ContenuPub rdf:datatype="&xsd;int">Publication 1</ContenuPub>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SuperAdminstrateur -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SuperAdminstrateur">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#SuperAdministrateur"/>
-        <idUtilisateur rdf:datatype="&xsd;int">4</idUtilisateur>
-        <nom rdf:datatype="&xsd;string">SuperAdministrateur</nom>
-        <partage rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#5TWIN4"/>
-        <gere rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publication"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#commentaire_1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#commentaire_1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Commentaire"/>
-        <idCommentaire rdf:datatype="&xsd;int">1</idCommentaire>
-        <Contenu rdf:datatype="&xsd;string">commentaire 1</Contenu>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#discussion1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#discussion1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Discussion"/>
-        <idDiscussion rdf:datatype="&xsd;int">1</idDiscussion>
-        <contenuDiscussion rdf:datatype="&xsd;string">discussion 1</contenuDiscussion>
-        <est_associe_a rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Groupe_1"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#event_1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#event_1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#EvenementSportif"/>
-        <idEvenement rdf:datatype="&xsd;int">1</idEvenement>
-        <nomEvenement rdf:datatype="&xsd;string">Sport</nomEvenement>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#publicite -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#publicite">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Publicite"/>
-        <idPublicite rdf:datatype="&xsd;int">1</idPublicite>
-        <descripitionPublicite rdf:datatype="&xsd;string">Sport</descripitionPublicite>
-        <est_associe_a rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Esprit"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#smile -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#smile">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Emoji"/>
-        <idEmoji rdf:datatype="&xsd;int">1</idEmoji>
-        <Symbole rdf:datatype="&xsd;string">smile</Symbole>
-        <est_associe_a rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#commentaire_1"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#user1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#user1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Memebre"/>
-        <idUtilisateur rdf:datatype="&xsd;int">1</idUtilisateur>
-        <nom rdf:datatype="&xsd;string">user1</nom>
-        <est_auteurDe rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#5TWIN4"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#visiteur1 -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#visiteur1">
-        <rdf:type rdf:resource="http://www.semanticweb.org/iheb/ontologies/2023/9/untitled-ontology-12#Visiteur"/>
-        <idUtilisateur rdf:datatype="&xsd;int">2</idUtilisateur>
-        <nom rdf:datatype="&xsd;string">visiteur</nom>
-    </owl:NamedIndividual>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://reseau-social.com/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://reseau-social.com/PagePublicClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/GroupeEducation">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/Groupe"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/EvenementSocial">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/Evenement"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/EvenementCulturel">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Evenement"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/EvenementSportif">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Evenement"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/GroupePublic">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Groupe"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/Emoji"/>
+  <owl:Class rdf:about="http://reseau-social.com/simpleUtilisateur">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/Utilisateur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/Invitation"/>
+  <owl:Class rdf:about="http://reseau-social.com/MembreClass">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/simpleUtilisateur"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/PageClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/Membre">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/SimpleUtilisateur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/PagePriveeClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/AdministrateurClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/Publicite"/>
+  <owl:Class rdf:about="http://reseau-social.com/SimpleUtilisateurClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/SimpleUtilisateur">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilegieClass"/>
+  <owl:Class rdf:about="http://reseau-social.com/GroupePrive">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Groupe"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/SuperAdministrateur">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilege"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilege">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/Commentaire"/>
+  <owl:Class rdf:about="http://reseau-social.com/SuperAdministrateurClass">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/Discussion"/>
+  <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilegie">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/UtilisateurClass"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/estAssocieA"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/aime">
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://reseau-social.com/reagitA"/>
+    </rdfs:subPropertyOf>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/estAuteurDe"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/partagemembre"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/est_associe_a"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/gere"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/est_auteurDe"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/repond_a"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/partage"/>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionPage">
+    <rdfs:domain rdf:resource="http://reseau-social.com/PageClass"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/contenu">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/emojis">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/Regles">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/badge">
+    <rdfs:domain rdf:resource="http://reseau-social.com/PageClass"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/idDiscussion">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/idInvitation">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationEvenement">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/ImagePublicite">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Publicite"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/idPublicite">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Publicite"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/idPage">
+    <rdfs:domain rdf:resource="http://reseau-social.com/PageClass"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationInvitation">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/nomGroupe">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/Date_creation">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/Type_Contenu">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/titreDiscussion">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionPublicite">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Publicite"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/date_CreationGroupe">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/id">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/lieu">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/idEvenement">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/idGroupe">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/date_CreationDiscussion">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateModificationEvenement">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionGroupe">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/status">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionEvenement">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/contenuDiscussion">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/nomEvenement">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <Membre rdf:about="http://reseau-social.com/membre">
+    <partage>
+      <EvenementSportif rdf:about="http://reseau-social.com/evenement2"/>
+    </partage>
+    <partage>
+      <Groupe rdf:about="http://reseau-social.com/groupe1">
+        <partagemembre>
+          <GroupePrive rdf:about="http://reseau-social.com/groupe2"/>
+        </partagemembre>
+        <estAssocieA>
+          <Discussion rdf:about="http://reseau-social.com/discussion"/>
+        </estAssocieA>
+        <nomGroupe>Groupe 1</nomGroupe>
+      </Groupe>
+    </partage>
+  </Membre>
+  <MembreClass rdf:about="http://reseau-social.com/membre1">
+    <est_auteurDe>
+      <PagePriveeClass rdf:about="http://reseau-social.com/5TWIN4">
+        <idPage>2</idPage>
+        <descriptionPage>5TWIN4</descriptionPage>
+      </PagePriveeClass>
+    </est_auteurDe>
+    <est_auteurDe>
+      <Commentaire rdf:about="http://reseau-social.com/commentaire2"/>
+    </est_auteurDe>
+    <repond_a>
+      <Commentaire rdf:about="http://reseau-social.com/commentaire1">
+        <contenu>Contenu du commentaire 1</contenu>
+        <Date_creation rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+        >2023-10-25T09:00:00</Date_creation>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</id>
+        <emojis>😊,👍,❤</emojis>
+        <Type_Contenu>Type de contenu 1</Type_Contenu>
+      </Commentaire>
+    </repond_a>
+  </MembreClass>
+  <SuperAdministrateurClass rdf:about="http://reseau-social.com/superAdministrateur1">
+    <gere rdf:resource="http://reseau-social.com/commentaire1"/>
+  </SuperAdministrateurClass>
+  <SuperAdministrateurClass rdf:about="http://reseau-social.com/superAdmin">
+    <partage>
+      <PagePublicClass rdf:about="http://reseau-social.com/Esprit">
+        <idPage>1</idPage>
+        <descriptionPage>Esprit</descriptionPage>
+      </PagePublicClass>
+    </partage>
+    <gere>
+      <Evenement rdf:about="http://reseau-social.com/evenement1">
+        <nomEvenement>Evenement 1</nomEvenement>
+      </Evenement>
+    </gere>
+    <gere>
+      <Invitation rdf:about="http://reseau-social.com/invitation"/>
+    </gere>
+    <gere rdf:resource="http://reseau-social.com/groupe1"/>
+    <gere rdf:resource="http://reseau-social.com/discussion"/>
+  </SuperAdministrateurClass>
+  <Emoji rdf:about="http://reseau-social.com/emoji1">
+    <est_associe_a rdf:resource="http://reseau-social.com/commentaire1"/>
+  </Emoji>
+  <UtilisateurPrivilege rdf:about="http://reseau-social.com/privilegeUser">
+    <estAuteurDe rdf:resource="http://reseau-social.com/evenement2"/>
+    <estAuteurDe rdf:resource="http://reseau-social.com/groupe2"/>
+  </UtilisateurPrivilege>
+  <Publicite rdf:about="http://reseau-social.com/pub1">
+    <idPublicite>1</idPublicite>
+    <descriptionPublicite>Publication Sport</descriptionPublicite>
+    <est_associe_a rdf:resource="http://reseau-social.com/5TWIN4"/>
+  </Publicite>
+  <PubliciteClass rdf:about="http://reseau-social.com/publicite_with_id_1">
+    <ImagePublicite>ImagePublicite Esprit Sport 3</ImagePublicite>
+    <descriptionPublicite>Esprit Sport 2</descriptionPublicite>
+    <idPublicite>1</idPublicite>
+  </PubliciteClass>
+  <UtilisateurPrivilegie rdf:about="http://reseau-social.com/utilisateurPrivilegie1">
+    <est_auteurDe rdf:resource="http://reseau-social.com/commentaire1"/>
+    <repond_a rdf:resource="http://reseau-social.com/commentaire2"/>
+  </UtilisateurPrivilegie>
+  <AdministrateurClass rdf:about="http://reseau-social.com/admin"/>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
-

@@ -291,24 +291,24 @@ public class WebSemantiqueApplication {
 	model.write(System.out,"RDF/XML");
 	*/
 
-
+/*
 	RDFDataMgr.write(System.out, model, Lang.NTRIPLES);
     FileOutputStream fichierSortie = null;
 
     try {
-		fichierSortie = new FileOutputStream (new File ("data/Page_Evenement_Commentaire_Group.owl"));
+		fichierSortie = new FileOutputStream (new File ("data/ReseauxSocial.owl"));
     }
 	catch (FileNotFoundException ex) {
 		System.out.println("err create file");
     }
 
     model.write (fichierSortie);
-    
+    */
 	String NS = "";
 	
 	// lire le model a partir d'une ontologie
 
-	Model model2 = JenaEngine.readModel("data/Page_Evenement_Commentaire_Group.owl");
+	Model model2 = JenaEngine.readModel("data/ReseauxSocial.owl");
 	if (model2 != null) {
 		//lire le Namespace de l’ontologie
 		NS = model2.getNsPrefixURI("");
