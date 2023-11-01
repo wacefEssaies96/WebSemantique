@@ -1,11 +1,14 @@
 package tn.esprit.tools;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.util.List;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.reasoner.rulesys.GenericRuleReasoner;
 import org.apache.jena.reasoner.rulesys.Rule;
+import org.apache.jena.riot.Lang;
+import org.apache.jena.riot.RDFDataMgr;
 import org.apache.jena.util.FileManager;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -115,5 +118,32 @@ return null;
 String queryString = FileTool.getContents(queryFile);
 return executeQuery(model, queryString);
 }
+public static void writeModel(Model model, String filename) {
+    try {
+        // Créez un flux de sortie vers le fichier spécifié
+        FileOutputStream output = new FileOutputStream(filename);
+
+        // Écrivez le modèle dans le fichier en utilisant le format RDF/XML
+        RDFDataMgr.write(output, model, Lang.RDFXML);
+
+        // Fermez le flux de sortie
+        output.close();
+
+        System.out.println("Modèle écrit dans le fichier : " + filename);
+    } catch (Exception e) {
+        e.printStackTrace();
+        System.err.println("Erreur lors de l'écriture du modèle dans le fichier : " + filename);
+    }
+}
+public static boolean askQuery(Model model, String queryString) {
+    try (QueryExecution qExec = QueryExecutionFactory.create(queryString, model)) {
+        return qExec.execAsk();
+    } catch (QueryParseException qpe) {
+        System.err.println("Erreur de syntaxe dans la requête SPARQL : " + qpe.getMessage());
+        return false;
+    }
+}
+
+
 
 }

@@ -2,7 +2,8 @@ import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import RootReducer from './reducers/RootReducer';
 
-const initialState = {};
+const initialState = {   // Assurez-vous que comments est initialisé comme un tableau vide
+};
 const middlewares = [thunk];
 let devtools = (x) => x;
 
