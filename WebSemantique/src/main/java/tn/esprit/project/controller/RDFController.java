@@ -37,5 +37,17 @@ public class RDFController {
     public String addPub(@PathVariable("idEvenement") int idEvenement) {
         return rdfDataService.deleteEventById(idEvenement);
     }
+    @GetMapping("/sparqlPage")
+    public String PageSparqlQuery() {
+        return rdfDataService.PageSparqlQuery();
+    }
+    @GetMapping("/sparqlComment")
+    public String CommentSparqlQuery() {
+        return rdfDataService.CommentSparqlQuery();
+    }
+    @GetMapping("/sparqlGroup")
+    public String GroupSparqlQuery() {
+        return rdfDataService.GroupSparqlQuery();
+    }
 }
 
