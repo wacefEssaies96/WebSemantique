@@ -136,6 +136,62 @@ public class RDFDataService {
         return j.getJSONObject("results").getJSONArray("bindings").toString();
 
     }
+    public String getEventById(int idEvent) {
+    	String qexec = "PREFIX ns: <http://reseau-social.com/>"+
+    			"PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" 
+    			+ "SELECT ?evenement "
+    			+ "WHERE {"
+    			+ "?evenement ns:idEvenement '"+idEvent+"' ."
+    			+ "}";
+
+    	Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
+
+        QueryExecution qe = QueryExecutionFactory.create(qexec, model);
+        ResultSet results = qe.execSelect();
+
+        // write to a ByteArrayOutputStream
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+        ResultSetFormatter.outputAsJSON(outputStream, results);
+
+        // and turn that into a String
+        String json = new String(outputStream.toByteArray());
+
+        JSONObject j = new JSONObject(json);
+        System.out.println(j.getJSONObject("results").getJSONArray("bindings"));
+
+        JSONArray res = j.getJSONObject("results").getJSONArray("bindings");
+
+        return j.getJSONObject("results").getJSONArray("bindings").toString();
+    }
+    public String deleteEventById(int idEvenement) {
+    	String pub = getEventById(idEvenement);
+    	if(pub!=null) {
+    		String deleteSparql = "PREFIX ns: <http://reseau-social.com/>" +
+    			    "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
+    			    "DELETE WHERE {"
+    			   // + " ?pub rdf:type ns:EvenementSportif ."
+    			    + " ?pub ns:idEvenement '" + idEvenement + "' ."
+    			    + " ?pub ns:nomEvenement ?nomEvenement ."
+				    + " ?pub ns:descriptionEvenement ?descriptionEvenement ."
+				    + " ?pub ns:lieu ?lieu ."
+    			    + "}";
+
+    		    Model model = JenaEngine.readModel("data/ReseauxSocial.owl");
+
+    		    UpdateRequest updateRequest = UpdateFactory.create(deleteSparql);
+
+    		    try {
+    		        UpdateAction.execute(updateRequest, model);
+    		        model.write(new FileOutputStream("data/ReseauxSocial.owl"), "RDF/XML");
+    		        return "Event deleted successfully!";
+    		    } catch (Exception e) {
+    		        e.printStackTrace();
+    		        return "Error deleting Event.";
+    		    }
+    	}
+    	return "Event not found!";
+    }
 
 
 }

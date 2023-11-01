@@ -43,63 +43,57 @@
   <owl:ObjectProperty rdf:about="http://reseau-social.com/gere"/>
   <owl:ObjectProperty rdf:about="http://reseau-social.com/partage"/>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/idInvitation">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationEvenement">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateModificationEvenement">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/status">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/lieu">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionEvenement">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationInvitation">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/idEvenement">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/nomEvenement">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <Membre rdf:about="http://reseau-social.com/membre">
     <partage>
-      <EvenementSportif rdf:about="http://reseau-social.com/evenement_id_1"/>
+      <EvenementSportif rdf:about="http://reseau-social.com/evenement2"/>
     </partage>
   </Membre>
   <UtilisateurPrivilege rdf:about="http://reseau-social.com/privilegeUser">
-    <estAuteurDe rdf:resource="http://reseau-social.com/evenement_id_1"/>
+    <estAuteurDe rdf:resource="http://reseau-social.com/evenement2"/>
   </UtilisateurPrivilege>
-  <EvenementCulturel rdf:about="http://reseau-social.com/evenement_id_1">
-    <descriptionEvenement>Description Evenement</descriptionEvenement>
-    <nomEvenement>Evenement 1</nomEvenement>
-    <lieu>null</lieu>
-    <idEvenement>1</idEvenement>
-  </EvenementCulturel>
   <SuperAdministrateur rdf:about="http://reseau-social.com/superAdmin">
     <gere>
-      <Evenement rdf:about="http://reseau-social.com/evenement_id_1">
-        <nomEvenement>Evenement 1</nomEvenement>
-      </Evenement>
+      <Invitation rdf:about="http://reseau-social.com/invitation"/>
     </gere>
     <gere>
-      <Invitation rdf:about="http://reseau-social.com/invitation"/>
+      <Evenement rdf:about="http://reseau-social.com/evenement1">
+        <nomEvenement>Evenement 1</nomEvenement>
+      </Evenement>
     </gere>
   </SuperAdministrateur>
 </rdf:RDF>

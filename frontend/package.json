@@ -26,6 +26,7 @@
     "notistack": "^2.0.3",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.9.1",
     "react-dom": "^17.0.2",
     "react-material-ui-form-validator": "^3.0.0",
     "react-perfect-scrollbar": "^1.5.8",
