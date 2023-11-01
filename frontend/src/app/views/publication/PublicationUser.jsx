@@ -126,12 +126,13 @@ const PublicationUser = () => {
             },
             body: JSON.stringify(pub),
         })
-            .then((response) => response.json())
+            .then((response) => console.log(response))
             .then(async (data) => {
                 console.log('Response from server:', data);
                 const res = await fetch("http://localhost:8082/websemantique/publications/getAllPub")
                 const pubs = await res.json()
                 setPubList(pubs);
+                handleClose()
             })
             .catch((error) => {
                 console.error('Error:', error);
