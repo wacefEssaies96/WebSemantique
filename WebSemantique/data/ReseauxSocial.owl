@@ -86,6 +86,24 @@
   <UtilisateurPrivilege rdf:about="http://reseau-social.com/privilegeUser">
     <estAuteurDe rdf:resource="http://reseau-social.com/evenement2"/>
   </UtilisateurPrivilege>
+  <PagePriveeClass rdf:about="http://reseau-social.com/page_with_id_3">
+    <badge>true</badge>
+    <descriptionPage>Esprit 3</descriptionPage>
+    <idPage>3</idPage>
+  </PagePriveeClass>
+  <PublicationTextuelle rdf:about="http://reseau-social.com/pub_with_id_11">
+    <idPub>11</idPub>
+    <dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+    >2023-11-01T21:00:14Z</dateCreationPub>
+    <contenu>publication 11 contenu</contenu>
+    <visibilite>public</visibilite>
+    <status>active</status>
+  </PublicationTextuelle>
+  <PubliciteClass rdf:about="http://reseau-social.com/publicite_with_id_2">
+    <ImagePublicite>ImagePublicite Esprit Sport</ImagePublicite>
+    <descriptionPublicite>Esprit Sport</descriptionPublicite>
+    <idPublicite>2</idPublicite>
+  </PubliciteClass>
   <SuperAdministrateur rdf:about="http://reseau-social.com/superAdmin">
     <gere>
       <Invitation rdf:about="http://reseau-social.com/invitation"/>
