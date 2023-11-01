@@ -1,6 +1,8 @@
 export const navigations = [
   { name: 'Dashboard', path: '/dashboard/default', icon: 'dashboard' },
   { name: 'Publication', path: '/pub', icon: 'art_track' },
+  { name: 'Events', path: '/events', icon: 'event_icon' },
+
   { label: 'PAGES', type: 'label' },
   {
     name: 'Session/Auth',
@@ -32,6 +34,8 @@ export const navigations = [
       { name: 'Slider', path: '/material/slider', iconText: 'S' },
       { name: 'Snackbar', path: '/material/snackbar', iconText: 'S' },
       { name: 'Table', path: '/material/table', iconText: 'T' },
+      { name: 'Comments', path: '/material/comments', iconText: 'C' },
+
     ],
   },
   {

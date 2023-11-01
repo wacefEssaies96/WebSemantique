@@ -29,14 +29,17 @@
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/Date_creation">
     <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
   </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/emoji_id">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Emoji"/>
+  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/Type_Contenu">
     <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/contenu">
     <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://reseau-social.com/emojis">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/emoji_symbole">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Emoji"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/id">
     <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
@@ -45,7 +48,7 @@
     <est_associe_a>
       <Commentaire rdf:about="http://reseau-social.com/commentaire1">
         <Type_Contenu>Type de contenu 1</Type_Contenu>
-        <emojis>😊,👍,❤</emojis>
+        <emoji_symbole>❤</emoji_symbole>
         <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
         >1</id>
         <Date_creation rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
@@ -53,6 +56,9 @@
         <contenu>Contenu du commentaire 1</contenu>
       </Commentaire>
     </est_associe_a>
+    <emoji_symbole>❤</emoji_symbole>
+    <emoji_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+    >1</emoji_id>
   </Emoji>
   <Membre rdf:about="http://reseau-social.com/membre1">
     <repond_a rdf:resource="http://reseau-social.com/commentaire1"/>

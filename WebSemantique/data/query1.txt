@@ -1,0 +1,21 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX ns: <http://reseau-social.com/>
+
+SELECT (str(?idPage) as ?idP) ?descriptionPage ?badge ?type
+WHERE {
+  {
+    ?page rdf:type ns:PagePriveeClass .
+    ?page ns:idPage ?idPage .
+    OPTIONAL { ?page ns:descriptionPage ?descriptionPage }
+    OPTIONAL { ?page ns:badge ?badge }
+    BIND("prive" as ?type)
+  }
+  UNION
+  {
+    ?page rdf:type ns:PagePublicClass .
+    ?page ns:idPage ?idPage .
+    OPTIONAL { ?page ns:descriptionPage ?descriptionPage }
+    OPTIONAL { ?page ns:badge ?badge }
+    BIND("public" as ?type)
+  }
+}

@@ -1,0 +1,5 @@
+SELECT ?superAdmin
+WHERE {
+  ?superAdmin a <http://reseau-social.com/SuperAdministrateur>.
+  ?superAdmin <http://reseau-social.com/gere> <http://reseau-social.com/commentaire1>.
+}
