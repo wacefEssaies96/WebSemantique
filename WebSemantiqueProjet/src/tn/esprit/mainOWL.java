@@ -26,12 +26,6 @@ public class mainOWL {
 		OntClass GroupeEducation = model.createClass(ns + "GroupeEducation");
 		OntClass GroupePrive = model.createClass(ns + "GroupePrive");
 		OntClass GroupePublic = model.createClass(ns + "GroupePublic");
-		OntClass Evenement = model.createClass(ns + "Evenement");
-		OntClass InvitationClass = model.createClass(ns + "Invitation");
-		OntClass UtilisateurClass = model.createClass(ns + "Utilisateur");
-		OntClass EvenementCulturel = model.createClass(ns + "EvenementCulturel");
-		OntClass EvenementSocial = model.createClass(ns + "EvenementSocial");
-		OntClass EvenementSportif = model.createClass(ns + "EvenementSportif");
 	
 		OntClass Utilisateur = model.createClass(ns + "Utilisateur");
 		OntClass SimpleUtilisateur = model.createClass(ns + "SimpleUtilisateur");
@@ -42,9 +36,6 @@ public class mainOWL {
 		GroupeEducation.addSuperClass(Groupe);
 		GroupePrive.addSuperClass(Groupe);
 		GroupePublic.addSuperClass(Groupe);
-		EvenementCulturel.addSuperClass(Evenement);
-		EvenementSocial.addSuperClass(Evenement);
-		EvenementSportif.addSuperClass(Evenement);
 
 		SimpleUtilisateur.addSuperClass(Utilisateur);
 		UtilisateurPrivilege.addSuperClass(Utilisateur);
@@ -52,7 +43,6 @@ public class mainOWL {
 		SuperAdministrateur.addSuperClass(UtilisateurPrivilege);
 			
 //		ObjectProperty reagitA = model.createObjectProperty(ns + "reagitA");
-		ObjectProperty reagitA = model.createObjectProperty(ns + "reagitA");
 		ObjectProperty aime = model.createObjectProperty(ns + "aime");
 		ObjectProperty partage = model.createObjectProperty(ns + "partage");
 		ObjectProperty estAuteurDe = model.createObjectProperty(ns + "estAuteurDe");
@@ -66,13 +56,6 @@ public class mainOWL {
 		Individual groupe2 = model.createIndividual(ns + "groupe2", GroupePrive);
 
 		Individual discussion = model.createIndividual(ns + "discussion", Discussion);
-			
-		aime.addSuperProperty(reagitA);
-			
-		Individual evenement1 = model.createIndividual(ns + "evenement1", Evenement);
-		Individual evenement2 = model.createIndividual(ns + "evenement2", EvenementSportif);
-
-		Individual invitation = model.createIndividual(ns + "invitation", InvitationClass);
 		
 		Individual privilegeUser = model.createIndividual(ns + "privilegeUser", UtilisateurPrivilege);
 		Individual membre = model.createIndividual(ns + "membre", Membre);
@@ -121,47 +104,7 @@ public class mainOWL {
 		
 
 
-	        groupe1.addProperty(partagemembre, groupe2);	
-			groupe1.addProperty(nomGroupe, "Groupe 1", XSDDatatype.XSDstring);
-
-		superAdmin.addProperty(gere, evenement1);
-		superAdmin.addProperty(gere, invitation);
-		privilegeUser.addProperty(estAuteurDe, evenement2);
-		membre.addProperty(partage, evenement2);
-		
-		DatatypeProperty idEvenement = model.createDatatypeProperty(ns + "idEvenement");
-		DatatypeProperty dateCreationEvenement = model.createDatatypeProperty(ns + "dateCreationEvenement");
-		DatatypeProperty dateModificationEvenement = model.createDatatypeProperty(ns + "dateModificationEvenement");
-		DatatypeProperty lieu = model.createDatatypeProperty(ns + "lieu");
-		DatatypeProperty nomEvenement = model.createDatatypeProperty(ns + "nomEvenement");
-		DatatypeProperty descriptionEvenement = model.createDatatypeProperty(ns + "descriptionEvenement");
-		
-		DatatypeProperty idInvitation = model.createDatatypeProperty(ns + "idInvitation");
-		DatatypeProperty dateCreationInvitation = model.createDatatypeProperty(ns + "dateCreationInvitation");
-		DatatypeProperty status = model.createDatatypeProperty(ns + "status");
-		
-		idEvenement.addDomain(Evenement);
-		idEvenement.addRange(XSD.integer);
-		dateCreationEvenement.addDomain(Evenement);
-		dateCreationEvenement.addRange(XSD.dateTime);
-		dateModificationEvenement.addDomain(Evenement);
-		dateModificationEvenement.addRange(XSD.dateTime);
-		lieu.addDomain(Evenement);
-		lieu.addRange(XSD.xstring);
-		nomEvenement.addDomain(Evenement);
-		nomEvenement.addRange(XSD.xstring);
-		descriptionEvenement.addDomain(Evenement);
-		descriptionEvenement.addRange(XSD.xstring);
-		
-		idInvitation.addDomain(InvitationClass);
-		idInvitation.addRange(XSD.integer);
-		dateCreationInvitation.addDomain(InvitationClass);
-		dateCreationInvitation.addRange(XSD.dateTime);
-		status.addDomain(InvitationClass);
-		status.addRange(XSD.xstring);
-		
-		evenement1.addProperty(nomEvenement, "Evenement 1", XSDDatatype.XSDstring);
-		
+	        groupe1.addProperty(partagemembre, groupe2);		
 		System.out.print("Ontologie de l'evenement est : ");
 		model.write(System.out,"RDF/XML");
 		String NS = "";
