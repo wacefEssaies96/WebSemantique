@@ -1,5 +1,6 @@
 import Loadable from 'app/components/Loadable';
 import { lazy } from 'react';
+const AppComments = Loadable(lazy(() => import('../material-kit/comments/SimpleForm')));
 
 const AppTable = Loadable(lazy(() => import('./tables/AppTable')));
 const AppForm = Loadable(lazy(() => import('./forms/AppForm')));
@@ -72,6 +73,10 @@ const materialRoutes = [
   {
     path: '/material/snackbar',
     element: <AppSnackbar />,
+  },
+  {
+    path: '/material/comments',
+    element: <AppComments />,
   },
 ];
 
