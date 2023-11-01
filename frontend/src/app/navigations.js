@@ -32,6 +32,8 @@ export const navigations = [
       { name: 'Slider', path: '/material/slider', iconText: 'S' },
       { name: 'Snackbar', path: '/material/snackbar', iconText: 'S' },
       { name: 'Table', path: '/material/table', iconText: 'T' },
+      { name: 'Comments', path: '/material/comments', iconText: 'C' },
+
     ],
   },
   {

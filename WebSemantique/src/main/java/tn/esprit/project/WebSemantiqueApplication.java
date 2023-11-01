@@ -11,7 +11,10 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import tn.esprit.tools.JenaEngine;
 
@@ -51,14 +54,16 @@ public class WebSemantiqueApplication {
         DatatypeProperty contenuProperty = model.createDatatypeProperty(ns + "contenu");
         DatatypeProperty dateCreationProperty = model.createDatatypeProperty(ns + "Date_creation");
         DatatypeProperty idProperty = model.createDatatypeProperty(ns + "id");
-        DatatypeProperty emojisProperty = model.createDatatypeProperty(ns + "emojis");
+        DatatypeProperty emojiIdProperty = model.createDatatypeProperty(ns + "emoji_id");
+        DatatypeProperty emojiSymboleProperty = model.createDatatypeProperty(ns + "emoji_symbole");
         DatatypeProperty typeContenuProperty = model.createDatatypeProperty(ns + "Type_Contenu");
 
         // Associez les DatatypeProperties à la classe Commentaire
         contenuProperty.addDomain(CommentaireClass);
         dateCreationProperty.addDomain(CommentaireClass);
         idProperty.addDomain(CommentaireClass);
-        emojisProperty.addDomain(CommentaireClass);
+        emojiIdProperty.addDomain(EmojiClass);
+        emojiSymboleProperty.addDomain(EmojiClass);
         typeContenuProperty.addDomain(CommentaireClass);
 
         Individual commentaire1 = model.createIndividual(ns + "commentaire1", CommentaireClass);
@@ -69,8 +74,8 @@ public class WebSemantiqueApplication {
        Literal dateCreation1 = model.createTypedLiteral("2023-10-25T09:00:00", XSDDatatype.XSDdateTime);
         commentaire1.addProperty(dateCreationProperty, dateCreation1);
         commentaire1.addProperty(idProperty, "1",XSDDatatype.XSDinteger);
-        Literal emojis1 = model.createTypedLiteral("😊,👍,❤", XSDDatatype.XSDstring);
-        commentaire1.addProperty(emojisProperty, emojis1);
+        Literal emojis1 = model.createTypedLiteral("❤", XSDDatatype.XSDstring);
+        commentaire1.addProperty(emojiSymboleProperty, emojis1);
         commentaire1.addProperty(typeContenuProperty, "Type de contenu 1");
 
         ObjectProperty est_auteurDe = model.createObjectProperty(ns + "est_auteurDe");
@@ -82,6 +87,8 @@ public class WebSemantiqueApplication {
         Individual utilisateurprivilegie1 = model.createIndividual(ns + "utilisateurPrivilegie1", utilisateurPrivilegieClass);
         Individual superadmin1 = model.createIndividual(ns + "superAdministrateur1", SuperAdministrateurClass);
         Individual emoji1 = model.createIndividual(ns + "emoji1", EmojiClass);
+        emoji1.addProperty(emojiIdProperty, "1", XSDDatatype.XSDinteger);
+        emoji1.addProperty(emojiSymboleProperty, "❤", XSDDatatype.XSDstring);
 
         superadmin1.addProperty(gere, commentaire1);
         utilisateurprivilegie1.addProperty(est_auteurDe, commentaire1);
@@ -107,6 +114,7 @@ public class WebSemantiqueApplication {
     		// query on the model after inference
     		System.out.println(JenaEngine.executeQueryFile(inferedModel,"data/querycommentaire.txt"));
     	
+
     	} else {
     		System.out.println("Error when reading model from ontology");
     	}
@@ -124,6 +132,16 @@ public class WebSemantiqueApplication {
 		
 		
 		
-	}
+	}@Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/commentcontroller/**") // Remplacez avec le chemin approprié
+                        .allowedOrigins("http://localhost:3000")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE");
+            }
+        };
+    }
 
 }
