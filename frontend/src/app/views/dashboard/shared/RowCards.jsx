@@ -62,7 +62,7 @@ const RowCards = () => {
                   </DateRange>
                 )}
               </Hidden>
-              <ProjectName>Project {id}</ProjectName>
+              <ProjectName>Groupe {id}</ProjectName>
             </Box>
           </Grid>
 

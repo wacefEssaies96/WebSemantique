@@ -1,0 +1,4 @@
+SELECT ?membre
+WHERE {
+  ?membre a <http://reseau-social.com/Membre>.
+}
