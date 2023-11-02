@@ -48,20 +48,24 @@ function CommentComponent() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const commentWithEmoji = {
-      Type_Contenu: { type: 'literal', value: contenu },
-      idc: { type: 'literal', value: getRandomInt(1, 100) },
-      emoji_symbole: { type: 'literal', value: selectedEmoji },
-      contenu: { type: 'literal', value: contenu },
-      Date_creation: { type: 'literal', value: Date.now() },
+      typeContenu: contenu,
+      id:  getRandomInt(1, 100).toString() , // Convert to string
+    
+      contenu: contenu,
+      dateCreation: Date.now() ,
     };
+    
     
     dispatch(addComment(commentWithEmoji));
     setContenu('');
     setSelectedEmoji('');
+    window.location.reload();
   };
 
   const handleDeleteClick = (commentId) => {
     dispatch(deleteComment(commentId.value));
+    window.location.reload();
+
   };
 
   return (
