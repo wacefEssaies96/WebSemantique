@@ -6,6 +6,9 @@ import Groupe from '../groupe/Groupe';
 import EventList from '../event/EventList';
 import AddEvent from '../event/AddEvent';
 import Hashtag from '../publication/Hashtag';
+import AppPage from '../Page/AppPage';
+import AppPublicite from '../Publicite/AppPublicite';
+
 
 const Analytics = Loadable(lazy(() => import('./Analytics')));
 
@@ -15,7 +18,9 @@ const dashboardRoutes = [
   { path: '/group', element: <Groupe /> },
   { path: '/events', element: <EventList /> },
   { path: '/events/add', element: <AddEvent /> },
-  { path: '/hash', element: <Hashtag /> }
+  { path: '/hash', element: <Hashtag /> },
+  { path: '/Page', element: <AppPage/> },
+  { path: '/Publicite', element: <AppPublicite/> },
 ];
 
 export default dashboardRoutes;
