@@ -1,7 +1,0 @@
-PREFIX ns: <http://reseau-social.com/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-SELECT ?group ?nomGroupe
-WHERE {
-	?group rdf:type ns:Groupe .
-	?group ns:nomGroupe ?nomGroupe .
-}

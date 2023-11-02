@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://reseau-social.com/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://reseau-social.com/Membre">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/simpleUtilisateur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/Emoji"/>
+  <owl:Class rdf:about="http://reseau-social.com/simpleUtilisateur">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://reseau-social.com/Utilisateur"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/SuperAdministrateur">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://reseau-social.com/Commentaire"/>
+  <owl:Class rdf:about="http://reseau-social.com/UtilisateurPrivilegie">
+    <rdfs:subClassOf rdf:resource="http://reseau-social.com/Utilisateur"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/gere"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/est_associe_a"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/est_auteurDe"/>
+  <owl:ObjectProperty rdf:about="http://reseau-social.com/repond_a"/>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/Date_creation">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/Type_Contenu">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/contenu">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/emojis">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://reseau-social.com/id">
+    <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
+  </owl:DatatypeProperty>
+  <Emoji rdf:about="http://reseau-social.com/emoji1">
+    <est_associe_a>
+      <Commentaire rdf:about="http://reseau-social.com/commentaire1">
+        <Type_Contenu>Type de contenu 1</Type_Contenu>
+        <emojis>😊,👍,❤</emojis>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</id>
+        <Date_creation rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+        >2023-10-25T09:00:00</Date_creation>
+        <contenu>Contenu du commentaire 1</contenu>
+      </Commentaire>
+    </est_associe_a>
+  </Emoji>
+  <Membre rdf:about="http://reseau-social.com/membre1">
+    <repond_a rdf:resource="http://reseau-social.com/commentaire1"/>
+    <est_auteurDe>
+      <Commentaire rdf:about="http://reseau-social.com/commentaire2"/>
+    </est_auteurDe>
+  </Membre>
+  <SuperAdministrateur rdf:about="http://reseau-social.com/superAdministrateur1">
+    <gere rdf:resource="http://reseau-social.com/commentaire1"/>
+  </SuperAdministrateur>
+  <UtilisateurPrivilegie rdf:about="http://reseau-social.com/utilisateurPrivilegie1">
+    <repond_a rdf:resource="http://reseau-social.com/commentaire2"/>
+    <est_auteurDe rdf:resource="http://reseau-social.com/commentaire1"/>
+  </UtilisateurPrivilegie>
+</rdf:RDF>
