@@ -91,23 +91,23 @@
     <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/Regles">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/badge">
     <rdfs:domain rdf:resource="http://reseau-social.com/PageClass"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/idDiscussion">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/idInvitation">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationEvenement">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/ImagePublicite">
     <rdfs:domain rdf:resource="http://reseau-social.com/Publicite"/>
@@ -119,12 +119,12 @@
     <rdfs:domain rdf:resource="http://reseau-social.com/PageClass"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateCreationInvitation">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/nomGroupe">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/Date_creation">
     <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
@@ -133,138 +133,153 @@
     <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/titreDiscussion">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionPublicite">
     <rdfs:domain rdf:resource="http://reseau-social.com/Publicite"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/date_CreationGroupe">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/id">
     <rdfs:domain rdf:resource="http://reseau-social.com/Commentaire"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/lieu">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/idEvenement">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/idGroupe">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/date_CreationDiscussion">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/dateModificationEvenement">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionGroupe">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Groupe"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/status">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Invitation"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/descriptionEvenement">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/contenuDiscussion">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Discussion"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://reseau-social.com/nomEvenement">
-    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
+  <PagePriveeClass rdf:about="http://reseau-social.com/page_with_id_2">
+    <idPage>2</idPage>
+    <descriptionPage>5TWIN4</descriptionPage>
+    <badge>false</badge>
+  </PagePriveeClass>
   <Membre rdf:about="http://reseau-social.com/membre">
     <partage>
-      <EvenementSportif rdf:about="http://reseau-social.com/evenement2"/>
-    </partage>
-    <partage>
       <Groupe rdf:about="http://reseau-social.com/groupe1">
-        <partagemembre>
-          <GroupePrive rdf:about="http://reseau-social.com/groupe2"/>
-        </partagemembre>
+        <nomGroupe>Groupe 1</nomGroupe>
         <estAssocieA>
           <Discussion rdf:about="http://reseau-social.com/discussion"/>
         </estAssocieA>
-        <nomGroupe>Groupe 1</nomGroupe>
+        <partagemembre>
+          <GroupePrive rdf:about="http://reseau-social.com/groupe2"/>
+        </partagemembre>
       </Groupe>
     </partage>
+    <partage>
+      <EvenementSportif rdf:about="http://reseau-social.com/evenement2"/>
+    </partage>
   </Membre>
+  <PubliciteClass rdf:about="http://reseau-social.com/publicite_with_id_3">
+    <ImagePublicite>Sport</ImagePublicite>
+    <descriptionPublicite>publicite 3</descriptionPublicite>
+    <idPublicite>3</idPublicite>
+  </PubliciteClass>
+  <PagePublicClass rdf:about="http://reseau-social.com/page_with_id_3">
+    <idPage>3</idPage>
+    <descriptionPage>4 TWIN 1</descriptionPage>
+    <badge>false</badge>
+  </PagePublicClass>
+  <PubliciteClass rdf:about="http://reseau-social.com/publicite_with_id_12">
+    <ImagePublicite>/assets/images/products/headphone-2.jpg</ImagePublicite>
+    <descriptionPublicite>publicite1</descriptionPublicite>
+    <idPublicite>12</idPublicite>
+  </PubliciteClass>
   <MembreClass rdf:about="http://reseau-social.com/membre1">
-    <est_auteurDe>
-      <PagePriveeClass rdf:about="http://reseau-social.com/5TWIN4">
-        <idPage>2</idPage>
-        <descriptionPage>5TWIN4</descriptionPage>
-      </PagePriveeClass>
-    </est_auteurDe>
+    <repond_a>
+      <Commentaire rdf:about="http://reseau-social.com/commentaire1">
+        <Type_Contenu>Type de contenu 1</Type_Contenu>
+        <emojis>😊,👍,❤</emojis>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
+        >1</id>
+        <Date_creation rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
+        >2023-10-25T09:00:00</Date_creation>
+        <contenu>Contenu du commentaire 1</contenu>
+      </Commentaire>
+    </repond_a>
     <est_auteurDe>
       <Commentaire rdf:about="http://reseau-social.com/commentaire2"/>
     </est_auteurDe>
-    <repond_a>
-      <Commentaire rdf:about="http://reseau-social.com/commentaire1">
-        <contenu>Contenu du commentaire 1</contenu>
-        <Date_creation rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"
-        >2023-10-25T09:00:00</Date_creation>
-        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer"
-        >1</id>
-        <emojis>😊,👍,❤</emojis>
-        <Type_Contenu>Type de contenu 1</Type_Contenu>
-      </Commentaire>
-    </repond_a>
+    <est_auteurDe rdf:resource="http://reseau-social.com/5TWIN4"/>
   </MembreClass>
   <SuperAdministrateurClass rdf:about="http://reseau-social.com/superAdministrateur1">
     <gere rdf:resource="http://reseau-social.com/commentaire1"/>
   </SuperAdministrateurClass>
   <SuperAdministrateurClass rdf:about="http://reseau-social.com/superAdmin">
-    <partage>
-      <PagePublicClass rdf:about="http://reseau-social.com/Esprit">
-        <idPage>1</idPage>
-        <descriptionPage>Esprit</descriptionPage>
-      </PagePublicClass>
-    </partage>
+    <gere rdf:resource="http://reseau-social.com/discussion"/>
+    <gere rdf:resource="http://reseau-social.com/groupe1"/>
+    <gere>
+      <Invitation rdf:about="http://reseau-social.com/invitation"/>
+    </gere>
     <gere>
       <Evenement rdf:about="http://reseau-social.com/evenement1">
         <nomEvenement>Evenement 1</nomEvenement>
       </Evenement>
     </gere>
-    <gere>
-      <Invitation rdf:about="http://reseau-social.com/invitation"/>
-    </gere>
-    <gere rdf:resource="http://reseau-social.com/groupe1"/>
-    <gere rdf:resource="http://reseau-social.com/discussion"/>
+    <partage rdf:resource="http://reseau-social.com/Esprit"/>
   </SuperAdministrateurClass>
   <Emoji rdf:about="http://reseau-social.com/emoji1">
     <est_associe_a rdf:resource="http://reseau-social.com/commentaire1"/>
   </Emoji>
   <UtilisateurPrivilege rdf:about="http://reseau-social.com/privilegeUser">
-    <estAuteurDe rdf:resource="http://reseau-social.com/evenement2"/>
     <estAuteurDe rdf:resource="http://reseau-social.com/groupe2"/>
+    <estAuteurDe rdf:resource="http://reseau-social.com/evenement2"/>
   </UtilisateurPrivilege>
   <Publicite rdf:about="http://reseau-social.com/pub1">
-    <idPublicite>1</idPublicite>
-    <descriptionPublicite>Publication Sport</descriptionPublicite>
     <est_associe_a rdf:resource="http://reseau-social.com/5TWIN4"/>
+    <descriptionPublicite>Publication Sport</descriptionPublicite>
+    <idPublicite>1</idPublicite>
   </Publicite>
   <PubliciteClass rdf:about="http://reseau-social.com/publicite_with_id_1">
-    <ImagePublicite>ImagePublicite Esprit Sport 3</ImagePublicite>
-    <descriptionPublicite>Esprit Sport 2</descriptionPublicite>
     <idPublicite>1</idPublicite>
+    <descriptionPublicite>Esprit Sport 2</descriptionPublicite>
+    <ImagePublicite>ImagePublicite Esprit Sport 3</ImagePublicite>
   </PubliciteClass>
   <UtilisateurPrivilegie rdf:about="http://reseau-social.com/utilisateurPrivilegie1">
-    <est_auteurDe rdf:resource="http://reseau-social.com/commentaire1"/>
     <repond_a rdf:resource="http://reseau-social.com/commentaire2"/>
+    <est_auteurDe rdf:resource="http://reseau-social.com/commentaire1"/>
   </UtilisateurPrivilegie>
   <AdministrateurClass rdf:about="http://reseau-social.com/admin"/>
+  <PagePublicClass rdf:about="http://reseau-social.com/page_with_id_1">
+    <badge>false</badge>
+    <descriptionPage>Esprit</descriptionPage>
+    <idPage>1</idPage>
+  </PagePublicClass>
 </rdf:RDF>
