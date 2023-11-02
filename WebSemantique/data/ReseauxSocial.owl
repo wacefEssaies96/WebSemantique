@@ -78,6 +78,11 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://reseau-social.com/Evenement"/>
   </owl:DatatypeProperty>
+  <PagePublicClass rdf:about="http://reseau-social.com/page_with_id_2">
+    <idPage>2</idPage>
+    <descriptionPage>Esprit 2</descriptionPage>
+    <badge>true</badge>
+  </PagePublicClass>
   <Membre rdf:about="http://reseau-social.com/membre">
     <partage>
       <EvenementSportif rdf:about="http://reseau-social.com/evenement2"/>
@@ -86,16 +91,21 @@
   <UtilisateurPrivilege rdf:about="http://reseau-social.com/privilegeUser">
     <estAuteurDe rdf:resource="http://reseau-social.com/evenement2"/>
   </UtilisateurPrivilege>
-  <PagePriveeClass rdf:about="http://reseau-social.com/page_with_id_3">
-    <badge>true</badge>
-    <descriptionPage>Esprit 3</descriptionPage>
+  <PagePublicClass rdf:about="http://reseau-social.com/page_with_id_3">
     <idPage>3</idPage>
-  </PagePriveeClass>
+    <descriptionPage>Esprit 333</descriptionPage>
+    <badge>false</badge>
+  </PagePublicClass>
   <PagePublicClass rdf:about="http://reseau-social.com/page_with_id_1">
     <idPage>1</idPage>
     <descriptionPage>5TWIN4</descriptionPage>
     <badge>false</badge>
   </PagePublicClass>
+  <PubliciteClass rdf:about="http://reseau-social.com/publicite_with_id_8">
+    <ImagePublicite>ImagePublicite Esprit Sport</ImagePublicite>
+    <descriptionPublicite>Esprit Sport foot</descriptionPublicite>
+    <idPublicite>8</idPublicite>
+  </PubliciteClass>
   <PublicationTextuelle rdf:about="http://reseau-social.com/pub_with_id_11">
     <idPub>11</idPub>
     <dateCreationPub rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime"

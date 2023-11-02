@@ -226,7 +226,7 @@ const AppPage = () => {
             onClose={handleClose}
             aria-labelledby="responsive-dialog-title"
           >
-            <DialogTitle id="responsive-dialog-title">Add New Page</DialogTitle>
+            <DialogTitle id="responsive-dialog-title">{mode} New Page</DialogTitle>
 
             <DialogContent>
               <DialogContentText>

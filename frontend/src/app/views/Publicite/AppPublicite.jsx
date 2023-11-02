@@ -266,7 +266,7 @@ const AppPublicite = () => {
             onClose={handleClose}
             aria-labelledby="responsive-dialog-title"
           >
-            <DialogTitle id="responsive-dialog-title">Add New Publicite</DialogTitle>
+            <DialogTitle id="responsive-dialog-title">{mode}New Publicite</DialogTitle>
 
             <DialogContent>
               <DialogContentText>
