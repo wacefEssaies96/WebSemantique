@@ -3,6 +3,8 @@ export const navigations = [
   { name: 'Publication', path: '/pub', icon: 'art_track' },
   { name: 'Page', path: '/Page', iconText: 'Page' },
   { name: 'Publicite', path: '/Publicite', iconText: 'Publicite' },
+  { name: 'Events', path: '/events', icon: 'event_icon' },
+
   { label: 'PAGES', type: 'label' },
   {
     name: 'Session/Auth',
